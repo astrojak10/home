@@ -1,15 +1,37 @@
 <!DOCTYPE html>
-<html lang="hi">
+<html lang="en-IN">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ASTROJAK - India's Most Accurate Astrology Consultant</title>
   <meta name="description" content="Apni Kundali padwaye. Janam Kundali, Love Life aur Career ki har uljhan ka shuddh Vedic upay.">
   
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23F8B700'/%3E%3Ccircle cx='32' cy='32' r='11' fill='none' stroke='white' stroke-width='5'/%3E%3C/svg%3E">
+  <meta name="theme-color" content="#F8B700">
+  <link rel="canonical" href="https://astrojak.netlify.app/">
+
+  <!-- Open Graph (WhatsApp / Instagram / Facebook previews) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="ASTROJAK">
+  <meta property="og:locale" content="en_IN">
+  <meta property="og:title" content="ASTROJAK - Vedic Astrology Consultation on WhatsApp">
+  <meta property="og:description" content="Kundli, Vivah Yog, Love aur Career ki uljhan ka shuddh Vedic upay. 15 min consultation sirf ₹49 mein.">
+  <meta property="og:url" content="https://YOUR-DOMAIN.com/">
+  <meta property="og:image" content="https://YOUR-DOMAIN.com/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <link rel="preload" as="image" href="pandit.webp" type="image/webp">
+  <meta property="og:image:alt" content="Acharya Narender Ji - ASTROJAK">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-P95LFD42');</script>
+  <script>window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);}</script>
+
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Cinzel:wght@700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Cinzel:wght@700;800&family=Noto+Sans+Devanagari:wght@400;600;700;800&display=swap" rel="stylesheet">
   
   <style>
     :root {
@@ -21,7 +43,7 @@
       --card-white: #FFFFFF;
       --text-charcoal: #1A1A1A;
       --text-muted: #595959;
-      --text-light: #828282;
+      --text-light: #6B6B6B;
       --border-warm: #F2E4C4;
       --border-accent: #ECCF8A;
       --whatsapp-green: #25D366;
@@ -42,7 +64,7 @@
     }
 
     body {
-      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      font-family: 'Plus Jakarta Sans', 'Noto Sans Devanagari', -apple-system, BlinkMacSystemFont, sans-serif;
       background-color: var(--bg-cream);
       color: var(--text-charcoal);
       line-height: 1.5;
@@ -990,9 +1012,118 @@
     .policy-box p, .policy-box li { font-size: 14.5px; color: var(--text-muted); line-height: 1.65; }
     .policy-box ul { padding-left: 20px; margin-top: 6px; }
     .policy-box a { color: var(--saffron-dark); font-weight: 700; }
+
+    /* FAQ */
+    .faq-section { padding: 72px 0; background: #FFFFFF; border-top: 1px solid var(--border-warm); scroll-margin-top: 110px; }
+    .faq-list { max-width: 760px; margin: 0 auto; display: grid; gap: 12px; }
+    details.faq, .dlg details { background: var(--bg-cream); border: 1.5px solid var(--border-warm); border-radius: 14px; padding: 14px 18px; }
+    details summary { cursor: pointer; font-weight: 800; font-size: 15px; list-style: none; display: flex; justify-content: space-between; gap: 12px; }
+    details summary::-webkit-details-marker { display: none; }
+    details summary::after { content: '+'; color: var(--saffron-accent); font-size: 20px; line-height: 1; }
+    details[open] summary::after { content: '\2212'; }
+    details p { font-size: 14px; color: var(--text-muted); line-height: 1.6; margin-top: 10px; }
+    details a, .dlg a.lnk { color: var(--saffron-dark); font-weight: 700; }
+
+    /* POPUPS */
+    dialog.dlg { border: none; border-radius: 20px; padding: 26px 22px; width: calc(100% - 32px); max-width: 460px; max-height: 88vh; box-shadow: var(--shadow-lg); margin: auto; color: var(--text-charcoal); }
+    dialog.dlg::backdrop { background: rgba(26, 26, 26, 0.55); }
+    .dlg h2 { font-size: 21px; font-weight: 800; margin-bottom: 4px; }
+    .dlg .sub { font-size: 13px; color: var(--text-muted); margin-bottom: 16px; }
+    .dlg-x { position: absolute; top: 12px; right: 14px; background: none; border: none; font-size: 26px; line-height: 1; cursor: pointer; color: var(--text-light); }
+    .dlg details { margin-bottom: 10px; }
+    .dlg-btn { display: flex; align-items: center; justify-content: center; gap: 8px; width: 100%; padding: 12px 16px; margin-top: 10px; border: none; border-radius: 14px; font: inherit; font-size: 14.5px; font-weight: 800; text-decoration: none; cursor: pointer; background: var(--whatsapp-green); color: #fff; }
+    .dlg-btn.alt { background: #fff; color: var(--saffron-dark); border: 2px solid var(--primary-yellow); }
+    .dlg label.fl { display: block; font-size: 13px; font-weight: 700; margin: 12px 0 4px; }
+    .dlg input[type=text], .dlg textarea { width: 100%; font: inherit; font-size: 14px; padding: 10px 12px; border: 1.5px solid var(--border-accent); border-radius: 12px; background: var(--bg-cream); }
+    .dlg textarea { min-height: 90px; resize: vertical; }
+    .stars { position: relative; display: flex; flex-direction: row-reverse; justify-content: center; gap: 6px; margin: 8px 0 4px; }
+    .stars input { position: absolute; opacity: 0; }
+    .stars label { font-size: 36px; line-height: 1; color: #E0D2AE; cursor: pointer; }
+    .stars input:checked + label, .stars input:checked ~ label, .stars label:hover, .stars label:hover ~ label { color: #FFB300; }
+    .stars input:focus-visible + label { outline: 2px solid var(--saffron-accent); border-radius: 6px; }
+    .fb-fab { position: fixed; bottom: 28px; left: 28px; z-index: 998; background: #fff; color: var(--saffron-dark); border: 2px solid var(--primary-yellow); border-radius: var(--radius-full); padding: 11px 18px; font: inherit; font-size: 14px; font-weight: 800; cursor: pointer; box-shadow: var(--shadow-md); }
+    .fb-fab:hover { background: #FFF5D2; }
+    @media (max-width: 768px) { .fb-fab { bottom: 84px; left: 16px; padding: 9px 14px; font-size: 13px; } }
+
+    /* LANGUAGE SWITCH */
+    .lang-switch { display: flex; background: #FFF5D2; border: 1.5px solid var(--border-accent); border-radius: var(--radius-full); padding: 3px; }
+    .lang-switch button { border: none; background: none; font: inherit; font-size: 12.5px; font-weight: 700; color: var(--text-muted); padding: 6px 12px; border-radius: var(--radius-full); cursor: pointer; transition: background 0.25s, color 0.25s; }
+    .lang-switch button.on { background: var(--gold-gradient); color: #fff; box-shadow: 0 2px 8px rgba(248, 183, 0, 0.4); }
+    html[lang="hi"] body { line-height: 1.7; }
+    html[lang="hi"] .hero-heading { line-height: 1.35; }
+    @media (max-width: 600px) {
+      .live-status-pill, .brand-subtitle { display: none; }
+      .brand-title { font-size: 20px; }
+      .header-actions { gap: 10px; }
+      .lang-switch button { padding: 5px 8px; font-size: 11px; }
+    }
+
+    /* ANIMATION */
+    html { scroll-behavior: smooth; }
+    #plans { scroll-margin-top: 110px; }
+    .site-header { transition: box-shadow 0.3s ease; }
+    .site-header.scrolled { box-shadow: 0 6px 20px rgba(0, 0, 0, 0.07); }
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(22px); } }
+    @keyframes popIn { from { opacity: 0; transform: translateY(26px) scale(0.97); } }
+    @keyframes shine { 0%, 60% { transform: translateX(-120%) skewX(-20deg); } 100% { transform: translateX(260%) skewX(-20deg); } }
+    @keyframes waPulse { 0% { box-shadow: 0 10px 30px rgba(37, 211, 102, 0.45), 0 0 0 0 rgba(37, 211, 102, 0.45); } 70%, 100% { box-shadow: 0 10px 30px rgba(37, 211, 102, 0.45), 0 0 0 16px rgba(37, 211, 102, 0); } }
+    @keyframes dlgIn { from { opacity: 0; transform: translateY(14px) scale(0.98); } }
+    @keyframes fadeIn { from { opacity: 0; } }
+    .hero-content > * { animation: fadeUp 0.7s cubic-bezier(0.2, 0.7, 0.2, 1) backwards; }
+    .hero-content > :nth-child(2) { animation-delay: 0.1s; }
+    .hero-content > :nth-child(3) { animation-delay: 0.2s; }
+    .hero-content > :nth-child(4) { animation-delay: 0.3s; }
+    .hero-content > :nth-child(5) { animation-delay: 0.4s; }
+    .astrologers-showcase-box { animation: popIn 0.9s 0.25s cubic-bezier(0.2, 0.7, 0.2, 1) backwards; }
+    .btn-hero-whatsapp { position: relative; overflow: hidden; }
+    .btn-hero-whatsapp::after { content: ''; position: absolute; top: 0; bottom: 0; width: 40%; background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.35), transparent); animation: shine 4.5s 1.2s infinite; }
+    .floating-whatsapp-btn { animation: waPulse 2.8s 2s infinite; }
+    dialog.dlg[open] { animation: dlgIn 0.28s ease; }
+    dialog.dlg[open]::backdrop { animation: fadeIn 0.28s ease; }
+    .rv { opacity: 0; transform: translateY(20px); transition: opacity 0.65s ease, transform 0.65s cubic-bezier(0.2, 0.7, 0.2, 1); transition-delay: var(--d, 0s); }
+    .rv.in { opacity: 1; transform: none; }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .hero-content > *, .astrologers-showcase-box, .btn-hero-whatsapp::after, .floating-whatsapp-btn, dialog.dlg[open], dialog.dlg[open]::backdrop { animation: none; }
+    }
+
+    /* PLAN HIGHLIGHT + TRUST LINE */
+    @media (min-width: 768px) { .plans-grid { align-items: center; } }
+    .plan-card.plan-featured { background: #FFFFFF; border-color: var(--saffron-accent); box-shadow: var(--shadow-md); padding-top: 44px; padding-bottom: 32px; }
+    .plan-featured .plan-price { font-size: 42px; }
+    .plan-featured .plan-badge { background: var(--saffron-accent); color: #fff; }
+    .secure-line { display: table; margin: 26px auto 0; font-size: 13px; font-weight: 700; color: #0E6B38; background: #EAF9EE; border: 1.5px solid #BAECC9; padding: 6px 16px; border-radius: var(--radius-full); }
+
+    /* FEEDBACK INPUTS (text, phone, textarea) */
+    .dlg input[type=tel] { width: 100%; font: inherit; font-size: 14px; padding: 10px 12px; border: 1.5px solid var(--border-accent); border-radius: 12px; background: var(--bg-cream); }
+    .dlg input[type=text]:focus, .dlg input[type=tel]:focus, .dlg textarea:focus { outline: none; border-color: var(--saffron-accent); background: #fff; box-shadow: 0 0 0 3px rgba(255, 111, 0, 0.18); }
+    .dlg input::placeholder, .dlg textarea::placeholder { color: var(--text-light); }
+    .dlg input[type=tel]:invalid:not(:placeholder-shown) { border-color: #C62828; box-shadow: 0 0 0 3px rgba(198, 40, 40, 0.12); }
+
+    /* CONTRAST FIXES */
+    .plan-badge, .lang-switch button.on, .step-number-badge { color: #3D2600; }
+    .plan-featured .plan-badge { color: #fff; }
+    .brand-subtitle { color: #7F5800; }
+    .footer-copyright { color: #A3A3A3; }
+
+    /* SMALL PHONES */
+    @media (max-width: 600px) {
+      .header-inner.container { padding: 0 14px; height: 64px; }
+      .brand-logo { gap: 8px; }
+    }
+    @media (max-width: 420px) {
+      .logo-symbol { display: none; }
+      .brand-title { font-size: 18px; }
+      .lang-switch button { padding: 5px 7px; font-size: 10.5px; }
+    }
   </style>
 </head>
 <body>
+
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P95LFD42"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
 
   <!-- 1. LIVE CONSULTATION TICKER -->
   <div class="top-ticker" aria-label="Live updates">
@@ -1029,12 +1160,17 @@
           </svg>
         </div>
         <div>
-          <div class="brand-title">ASTRO<span>JAK</span></div>
+          <div class="brand-title">Astro<span>JAK</span></div>
           <div class="brand-subtitle">India's Platform for Astrology consultation</div>
         </div>
       </a>
 
       <div class="header-actions">
+        <div class="lang-switch" role="group" aria-label="Language">
+          <button type="button" data-lang="en" aria-pressed="true" class="on">English</button>
+          <button type="button" data-lang="hi" aria-pressed="false">हिन्दी</button>
+          <button type="button" data-lang="hing" aria-pressed="false">Hinglish</button>
+        </div>
         <div class="live-status-pill">
           <div class="ping-circle"></div>
           <span>Acharya Online</span>
@@ -1087,7 +1223,7 @@
           <div class="hero-trust-list">
             <span class="trust-tag">⚡ 30s Instant Connect</span>
             <span class="trust-tag">🔒 100% Private</span>
-            <span class="trust-tag">🕉️ Shuddh Vedic Vidhi</span>
+            <span class="trust-tag">🕉️ Genuine Remedies</span>
           </div>
         </div>
 
@@ -1103,7 +1239,7 @@
             <div class="large-circular-avatar-wrap">
               <div class="large-aura-ring"></div>
               <div id="largeAvatarContainer" style="width: 100%; height: 100%; border-radius: 50%; overflow: hidden; position: relative; z-index: 2; border: 4px solid #FFFFFF; box-shadow: 0 8px 24px rgba(230,81,0,0.18); background: #FFF8E7;">
-                <img src="pandit.png" id="largeAvatarImg" class="large-circle-img" alt="Acharya Narender Ji" style="width: 100%; height: 100%; object-fit: cover; object-position: center 12%;">
+                <img src="pandit.webp" width="360" height="482" fetchpriority="high" decoding="async" id="largeAvatarImg" class="large-circle-img" alt="Acharya Narender Ji" style="width: 100%; height: 100%; object-fit: cover; object-position: center 12%;">
               </div>
               <div class="verified-badge-float">
                 <span>✓</span> Verified
@@ -1202,7 +1338,7 @@
            class="service-card" target="_blank" rel="noopener noreferrer">
           <div class="service-icon-box">📜</div>
           <h3 class="service-title">Janam Patrika</h3>
-          <p class="service-desc">AI aur shuddh Vedic ganit dwara banayi gayi sampoorna janam patrika PDF WhatsApp par 100% free prapt karein.</p>
+          <p class="service-desc">Vedic ganit dwara banayi gayi sampoorna Janam Patrika prapt karein.</p>
           <div class="service-action-link">WhatsApp Par Poochhein &rarr;</div>
         </a>
       </div>
@@ -1217,7 +1353,7 @@
         <h2 class="section-main-heading">Apna Plan Chunein</h2>
       </div>
       <div class="plans-grid">
-        <a href="https://wa.me/917827673637?text=Hi!%20I%20want%20to%20book%20astrology%20consultation.%20Plan:%2015%20min%20(Rs%2049)" class="plan-card" target="_blank" rel="noopener noreferrer">
+        <a href="https://rzp.io/rzp/zHGSDp4u" class="plan-card" data-plan="15 min" target="_blank" rel="noopener noreferrer">
           <span class="plan-badge">Intro Offer</span>
           <div class="plan-emoji">⭐</div>
           <div class="plan-duration">15 Min Consultation</div>
@@ -1225,15 +1361,15 @@
           <div class="plan-note">Intro offer for first-time clients</div>
           <span class="plan-btn">Choose Plan &rarr;</span>
         </a>
-        <a href="https://wa.me/917827673637?text=Hi!%20I%20want%20to%20book%20astrology%20consultation.%20Plan:%2030%20min%20(Rs%20499)" class="plan-card" target="_blank" rel="noopener noreferrer">
-          
+        <a href="https://rzp.io/rzp/DmAa5ot" class="plan-card plan-featured" data-plan="30 min" target="_blank" rel="noopener noreferrer">
+          <span class="plan-badge">Most Popular</span>
           <div class="plan-emoji">💫</div>
           <div class="plan-duration">30 Min Consultation</div>
           <div class="plan-price">₹499</div>
           <div class="plan-note">Detailed guidance on your key question</div>
           <span class="plan-btn">Choose Plan &rarr;</span>
         </a>
-        <a href="https://wa.me/917827673637?text=Hi!%20I%20want%20to%20book%20astrology%20consultation.%20Plan:%2045%20min%20(Rs%20999)" class="plan-card" target="_blank" rel="noopener noreferrer">
+        <a href="https://rzp.io/rzp/rk8wwbiR" class="plan-card" data-plan="45 min" target="_blank" rel="noopener noreferrer">
           
           <div class="plan-emoji">🌟</div>
           <div class="plan-duration">45 Min Consultation</div>
@@ -1242,7 +1378,8 @@
           <span class="plan-btn">Choose Plan &rarr;</span>
         </a>
       </div>
-      <p class="plans-foot">Plan par click karte hi WhatsApp khulega. Read our <a href="#refund-policy">Refund Policy</a>.</p>
+      <p class="secure-line">🔒 Secured by Razorpay</p>
+      <p class="plans-foot">Plan par click karte hi secure Razorpay payment page khulega. Payment ke baad WhatsApp par apni Kundli details bhejein. <a href="#refund-policy">Refund Policy</a></p>
     </div>
   </section>
 
@@ -1348,6 +1485,24 @@
     </div>
   </section>
 
+  <!-- FAQ -->
+  <section class="faq-section" id="faq">
+    <div class="container">
+      <div class="section-title-wrap">
+        <span class="section-tag">FAQ</span>
+        <h2 class="section-main-heading">Aksar Puche Jaane Wale Sawal</h2>
+      </div>
+      <div class="faq-list">
+        <details class="faq"><summary>Consultation kaise hoti hai?</summary><p>Apna plan chunein aur payment karein. Phir WhatsApp par Date of Birth, Time, Place aur apna sawal bhejein. Acharya aapko call par guidance denge aur baad mein WhatsApp par likhit summary milegi.</p></details>
+        <details class="faq"><summary>Mere liye kaunsa plan sahi hai?</summary><p>15 min ek seedhe sawal ke liye, 30 min ek important sawal par detailed guidance ke liye, aur 45 min poori Kundli ke in-depth analysis aur upay ke liye hai.</p></details>
+        <details class="faq"><summary>Kya payment safe hai?</summary><p>Payment Razorpay ke secure payment page par hota hai. Hum aapke card ya UPI ki details store nahi karte.</p></details>
+        <details class="faq"><summary>Agar mujhe birth time nahi pata ho?</summary><p>Jitni jaankari ho utni bhejein, approximate time bhi. Acharya aapko batayenge ki us ke saath kya guidance di ja sakti hai.</p></details>
+        <details class="faq"><summary>Kya meri jaankari private rahegi?</summary><p>Haan. Aapki birth details aur baatcheet confidential rakhi jaati hain. Details ke liye: <a href="#privacy-policy">Privacy Policy</a></p></details>
+        <details class="faq"><summary>Kya result ki guarantee hai?</summary><p>Jyotish Vedic parampara par based margdarshan hai, kisi specific result ki guarantee nahi li ja sakti. Refund ke liye: <a href="#refund-policy">Refund Policy</a></p></details>
+      </div>
+    </div>
+  </section>
+
   <!-- 8. FOOTER -->
   <footer class="site-footer">
     <div class="container">
@@ -1356,8 +1511,8 @@
       
       <div class="footer-trust-strip">
         <span class="footer-pill">🛡️ 100% Confidential & Secure</span>
-        <span class="footer-pill">⚡ Certified Vedic Algorithms</span>
-        <span class="footer-pill">🕉️ Authentic Parampara</span>
+        <span class="footer-pill">⚡ Certified Vedic Astrologer</span>
+        <span class="footer-pill">🕉️ Genuine Remedies</span>
       </div>
 
       <a href="https://www.instagram.com/astrojakk?stkn=MW1nNGFkcXB5OHJqYQ==" class="footer-social" target="_blank" rel="noopener noreferrer">
@@ -1366,9 +1521,13 @@
       </a>
 
       <div class="footer-links">
+        <a href="#faq">FAQ</a>
+        <a href="#help" data-dialog="help">Help Center</a>
+        <a href="#contact" data-dialog="contact">Contact Us</a>
+        <a href="#feedback" data-dialog="feedback">Feedback</a>
+        <a href="#terms">Terms of Service</a>
         <a href="#refund-policy">Refund Policy</a>
         <a href="#privacy-policy">Privacy Policy</a>
-        <a href="mailto:astrojak10@gmail.com">astrojak10@gmail.com</a>
       </div>
 
       <p class="footer-copyright">
@@ -1419,7 +1578,7 @@
         <h1>Privacy Policy</h1>
         <p class="policy-updated">Last updated: 1 October 2026</p>
         <h2>1. Information We Collect</h2>
-        <p>When you contact or book with us, we may collect your name, phone number (WhatsApp), date, time and place of birth, the questions you ask, and payment confirmation details. We do not collect sensitive payment data such as card numbers; payments are handled by third-party payment providers.</p>
+        <p>When you contact or book with us, we may collect your name, phone number (WhatsApp), date, time and place of birth, the questions you ask, and payment confirmation details. If you submit feedback, we also receive your rating, message and, optionally, your name and phone number. We do not collect sensitive payment data such as card numbers; payments are handled by third-party payment providers.</p>
         <h2>2. How We Use It</h2>
         <ul>
           <li>To prepare your Kundli and deliver your consultation.</li>
@@ -1427,7 +1586,7 @@
           <li>To improve our services and prevent misuse.</li>
         </ul>
         <h2>3. Sharing of Information</h2>
-        <p>We do not sell your personal data. It may be shared only with payment providers, messaging platforms (such as WhatsApp) and service providers needed to run our service, or when required by law.</p>
+        <p>We do not sell your personal data. It may be shared only with payment providers, messaging platforms (such as WhatsApp) and service providers needed to run our service, or when required by law. Feedback form submissions are processed through a third-party form service (Formspree).</p>
         <h2>4. Confidentiality</h2>
         <p>Your birth details and consultation conversations are kept confidential and are accessed only by those who need them to serve you.</p>
         <h2>5. Data Retention</h2>
@@ -1443,6 +1602,196 @@
       </div>
     </div>
   </div>
+
+  <div class="policy-page" id="terms">
+    <div class="container">
+      <div class="policy-box">
+        <a href="#" class="policy-back">&larr; Back to Home</a>
+        <h1>Terms of Service</h1>
+        <p class="policy-updated">Last updated: 2 October 2026</p>
+        <h2>1. Acceptance</h2>
+        <p>By using this website or booking a consultation with ASTROJAK, you agree to these Terms. If you do not agree, please do not use the service.</p>
+        <h2>2. Our Service</h2>
+        <p>ASTROJAK offers astrology consultations (15, 30 and 45 minutes) delivered via WhatsApp call, chat or as arranged with you, based on Vedic astrology.</p>
+        <h2>3. Eligibility</h2>
+        <p>You must be 18 years or older to book. If you are younger, a parent or guardian must book on your behalf.</p>
+        <h2>4. Payments</h2>
+        <ul>
+          <li>Prices are shown in Indian Rupees (INR) and may change from time to time.</li>
+          <li>Payments are processed by third-party payment provider Razorpay; we do not store your card or UPI details.</li>
+          <li>Please send your details on WhatsApp after paying so we can schedule your session.</li>
+        </ul>
+        <h2>5. Accurate Information</h2>
+        <p>Predictions depend on the birth details you share. You are responsible for providing them as accurately as you can.</p>
+        <h2>6. No Guarantee; Not Professional Advice</h2>
+        <p>Astrology is based on Vedic traditions and personal belief. Guidance is for general direction only and does not guarantee any outcome. It is not medical, legal, financial or psychological advice; please consult a qualified professional for those matters.</p>
+        <h2>7. Acceptable Use</h2>
+        <p>Please be respectful to our team. We may refuse or end service to anyone who is abusive, misuses the service, or records or redistributes consultations without permission.</p>
+        <h2>8. Refunds</h2>
+        <p>Refunds are governed by our <a href="#refund-policy">Refund Policy</a>.</p>
+        <h2>9. Intellectual Property</h2>
+        <p>Website content, branding and written summaries are owned by ASTROJAK and are for your personal use only.</p>
+        <h2>10. Limitation of Liability</h2>
+        <p>To the extent permitted by law, ASTROJAK is not liable for decisions you make or losses you incur based on consultations or website content.</p>
+        <h2>11. Governing Law</h2>
+        <p>These Terms are governed by the laws of India.</p>
+        <h2>12. Changes &amp; Contact</h2>
+        <p>We may update these Terms; the latest version will always be on this website. Questions: <a href="mailto:astrojak10@gmail.com">astrojak10@gmail.com</a></p>
+      </div>
+    </div>
+  </div>
+
+  <button type="button" class="fb-fab" data-dialog="feedback">⭐ Feedback</button>
+
+  <dialog class="dlg" id="dlg-help">
+    <button type="button" class="dlg-x" data-close aria-label="Close">&times;</button>
+    <h2>Help Center</h2>
+    <p class="sub">Common problems aur unke jawab.</p>
+    <details><summary>Booking kaise karein?</summary><p>Plans section se plan chunein, payment karein, phir WhatsApp par apni birth details bhejein.</p></details>
+    <details><summary>Payment ho gaya par confirmation nahi mila</summary><p>WhatsApp par payment ka screenshot bhejein. Agar paise kat gaye hain aur booking confirm nahi hui, to email par transaction details bhejein.</p></details>
+    <details><summary>Time reschedule karna hai</summary><p>Jitna jaldi ho sake WhatsApp ya email se batayein. Hum availability ke hisaab se naya time denge.</p></details>
+    <details><summary>Refund chahiye</summary><p>Zaroorat ho to email karein. Niyam: <a href="#refund-policy" data-close>Refund Policy</a></p></details>
+    <details><summary>Kundli ke liye kya details chahiye?</summary><p>Date of Birth, Birth Time, Birth Place aur aapka sawal.</p></details>
+    <a href="#faq" class="dlg-btn alt" data-close>Read FAQ</a>
+    <a href="#contact" class="dlg-btn" data-dialog="contact">Contact Us</a>
+  </dialog>
+
+  <dialog class="dlg" id="dlg-contact">
+    <button type="button" class="dlg-x" data-close aria-label="Close">&times;</button>
+    <h2>Contact Us</h2>
+    <p class="sub">Hum aapki madad ke liye yahan hain.</p>
+    <a class="dlg-btn" href="https://wa.me/917827673637?text=Hi!%20I%20need%20help." target="_blank" rel="noopener noreferrer">WhatsApp: +91 78276 73637</a>
+    <a class="dlg-btn alt" href="mailto:astrojak10@gmail.com">Email: astrojak10@gmail.com</a>
+    <a class="dlg-btn alt" href="https://www.instagram.com/astrojakk" target="_blank" rel="noopener noreferrer">Instagram: @astrojakk</a>
+  </dialog>
+
+  <dialog class="dlg" id="dlg-feedback">
+    <button type="button" class="dlg-x" data-close aria-label="Close">&times;</button>
+    <h2>Rate Your Experience</h2>
+    <p class="sub">Aapka feedback hamari team tak jaata hai.</p>
+    <form id="fbForm">
+      <div class="stars" role="radiogroup" aria-label="Rating">
+        <input type="radio" name="rating" id="st5" value="5" required><label for="st5" title="5">★</label>
+        <input type="radio" name="rating" id="st4" value="4"><label for="st4" title="4">★</label>
+        <input type="radio" name="rating" id="st3" value="3"><label for="st3" title="3">★</label>
+        <input type="radio" name="rating" id="st2" value="2"><label for="st2" title="2">★</label>
+        <input type="radio" name="rating" id="st1" value="1"><label for="st1" title="1">★</label>
+      </div>
+      <label class="fl" for="fbWho">Name</label>
+      <input type="text" id="fbWho" name="who" autocomplete="name">
+      <label class="fl" for="fbPhone">Phone Number (Optional)</label>
+      <input type="tel" id="fbPhone" name="phone" autocomplete="tel" inputmode="tel" maxlength="15" placeholder="98XXXXXXXX" pattern="(\+?91[ \-]?)?[6-9][0-9]{9}" title="10-digit Indian mobile number">
+      <label class="fl" for="fbMsg">Feedback</label>
+      <textarea id="fbMsg" name="message" required></textarea>
+      <button type="submit" class="dlg-btn">Send Feedback</button>
+    </form>
+    <p id="fbThanks" hidden class="sub" style="font-size:15px;font-weight:700;margin:12px 0 0">Dhanyavaad! Aapka feedback mil gaya.</p>
+  </dialog>
+
+  <script>
+    (function () {
+      // Feedback goes to you privately. Paste a Formspree URL (https://formspree.io/f/xxxx) to receive it in a dashboard;
+      // while empty, it opens an email to FEEDBACK_EMAIL instead.
+      var FEEDBACK_ENDPOINT = 'https://formspree.io/f/xkjgalev', FEEDBACK_EMAIL = 'astrojak10@gmail.com';
+      var ids = ['help', 'contact', 'feedback'];
+      function $(id) { return document.getElementById(id); }
+      function track(n, p) { if (window.gtag) gtag('event', n, p || {}); }
+      function open(id) {
+        ids.forEach(function (i) { var d = $('dlg-' + i); if (d.open) d.close(); });
+        $('dlg-' + id).showModal();
+        history.replaceState(null, '', '#' + id);
+      }
+      ids.forEach(function (i) {
+        $('dlg-' + i).addEventListener('close', function () {
+          if (location.hash === '#' + i) history.replaceState(null, '', location.pathname + location.search);
+        });
+      });
+      document.addEventListener('click', function (e) {
+        var t = e.target.closest('[data-dialog]');
+        if (t) { e.preventDefault(); open(t.getAttribute('data-dialog')); return; }
+        var c = e.target.closest('[data-close]');
+        if (c) { c.closest('dialog').close(); return; }
+        if (e.target.tagName === 'DIALOG') { e.target.close(); return; }
+        var a = e.target.closest('a');
+        if (a && a.href.indexOf('rzp.io') > -1) track('begin_checkout', { plan: a.getAttribute('data-plan') });
+        else if (a && a.href.indexOf('wa.me') > -1) track('whatsapp_click');
+      });
+      if (ids.indexOf(location.hash.slice(1)) > -1) open(location.hash.slice(1));
+
+      $('fbForm').addEventListener('submit', function (e) {
+        e.preventDefault();
+        var f = e.target.elements;
+        var d = { rating: f.rating.value, name: f.who.value, phone: f.phone.value, message: f.message.value, page: location.href };
+        function done() { e.target.hidden = true; $('fbThanks').hidden = false; track('feedback_submit', { rating: d.rating }); }
+        if (FEEDBACK_ENDPOINT) {
+          fetch(FEEDBACK_ENDPOINT, { method: 'POST', headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' }, body: JSON.stringify(d) })
+            .then(function (r) { if (r.ok) done(); else alert('Feedback send nahi ho paya. Kripya dobara try karein.'); })
+            .catch(function () { alert('Feedback send nahi ho paya. Kripya dobara try karein.'); });
+        } else {
+          location.href = 'mailto:' + FEEDBACK_EMAIL + '?subject=' + encodeURIComponent('ASTROJAK feedback: ' + d.rating + '/5') +
+            '&body=' + encodeURIComponent('Rating: ' + d.rating + '/5\nName: ' + d.name + '\nPhone: ' + d.phone + '\n\n' + d.message);
+          done();
+        }
+      });
+    })();
+  </script>
+
+  <script>
+    (function () {
+      var TR = {"Neeraj from Mumbai booked consultation just now": [null, "नीरज (मुंबई) ने अभी परामर्श बुक किया"], "Neha from Delhi consulted our Jyotish for Marriage Yog": [null, "नेहा (दिल्ली) ने विवाह योग के लिए ज्योतिषी से परामर्श लिया"], "Vikram from Pune got Career Kundli read": [null, "विक्रम (पुणे) ने करियर कुंडली देखी"], "Priya from Bengaluru unlocked Love Compatibility": [null, "प्रिया (बेंगलुरु) ने लव कंपैटिबिलिटी देखी"], "Amit from Jaipur consulted for Shani Sade Sati": [null, "अमित (जयपुर) ने शनि साढ़ेसाती पर परामर्श लिया"], "India's Platform for Astrology consultation": [null, "ज्योतिष परामर्श का भारतीय प्लेटफ़ॉर्म"], "Acharya Online": [null, "आचार्य ऑनलाइन"], "Chat on WhatsApp": [null, "व्हाट्सऐप पर चैट करें"], "✨ Book Consultation": [null, "✨ परामर्श बुक करें"], "Apne Bhavishya Ka": ["Get Accurate", "अपने भविष्य का"], "Satik Margdarshan": ["Guidance", "सटीक मार्गदर्शन"], "Payein": ["For Your Future", "पाएं"], "Janam Kundali, Vivah Yog, Love Life aur Career ki har uljhan ka shuddh Vedic upay. India ke certified Vedic Astrologers se seedhe WhatsApp par guidance lein.": ["Pure Vedic remedies for every worry in your Janam Kundali, marriage, love life and career. Get guidance directly on WhatsApp from India's certified Vedic astrologers.", "जन्म कुंडली, विवाह योग, लव लाइफ और करियर की हर उलझन का शुद्ध वैदिक उपाय। भारत के प्रमाणित वैदिक ज्योतिषियों से सीधे व्हाट्सऐप पर मार्गदर्शन लें।"], "WhatsApp Chat": [null, "व्हाट्सऐप चैट"], "View Plans": [null, "प्लान देखें"], "⚡ 30s Instant Connect": [null, "⚡ 30 सेकंड में कनेक्ट"], "🔒 100% Private": [null, "🔒 100% गोपनीय"], "🕉️ Genuine Remedies": [null, "🕉️ प्रामाणिक उपाय"], "Top Verified Astrologer": [null, "शीर्ष सत्यापित ज्योतिषी"], "Acharya Narender Ji": [null, "आचार्य नरेंद्र जी"], "Verified": [null, "सत्यापित"], "Kundli Vishleshan & Vivah Yog Specialist": ["Kundli Analysis & Marriage Yog Specialist", "कुंडली विश्लेषण और विवाह योग विशेषज्ञ"], "(15,200+ Reviews)": [null, "(15,200+ समीक्षाएं)"], "16+ Yrs Exp": ["16+ Years Exp", "16+ वर्ष अनुभव"], "Vedic Jyotish, Shani Sade Sati, Kundli dosh aur Vivah yog ke satik paramarsh ke liye Bharat ke jaane-maane Vedic vidwan.": ["A well-known Vedic scholar of India for accurate guidance on Vedic astrology, Shani Sade Sati, Kundli doshas and marriage yog.", "वैदिक ज्योतिष, शनि साढ़ेसाती, कुंडली दोष और विवाह योग के सटीक परामर्श के लिए भारत के जाने-माने वैदिक विद्वान।"], "Acharya Narender Ji Se WhatsApp Par Baat Karein": ["Chat with Acharya Narender Ji on WhatsApp", "आचार्य नरेंद्र जी से व्हाट्सऐप पर बात करें"], "Users Guided Across India": [null, "भारत भर में मार्गदर्शन पाए यूज़र्स"], "Daily Consultations": [null, "रोज़ाना परामर्श"], "Client Satisfaction Rate": [null, "ग्राहक संतुष्टि दर"], "Rating (15,200+ Reviews)": [null, "रेटिंग (15,200+ समीक्षाएं)"], "Hamari Pramukh Sevayein": ["Our Key Services", "हमारी प्रमुख सेवाएं"], "Popular Vedic Astrology Categories": [null, "लोकप्रिय वैदिक ज्योतिष श्रेणियां"], "Love & Vivah Yog": ["Love & Marriage Yog", "लव और विवाह योग"], "Shadi kab hogi? Kundli matching, Manglik Dosh aur Prem me aa rahi har badha ka satik Vedic nidaan.": ["When will marriage happen? Kundli matching, Manglik Dosh and accurate Vedic solutions for every obstacle in love.", "शादी कब होगी? कुंडली मिलान, मांगलिक दोष और प्रेम में आ रही हर बाधा का सटीक वैदिक निदान।"], "WhatsApp Par Poochhein →": ["Ask on WhatsApp →", "व्हाट्सऐप पर पूछें →"], "Career & Vyapar": ["Career & Business", "करियर और व्यापार"], "Nayi job, promotion ya business me labh kab hoga? Surya aur Guru ki dasha ka satik aakalan.": ["When will a new job, promotion or business profit come? Accurate analysis of Surya and Guru dasha.", "नई जॉब, प्रमोशन या बिज़नेस में लाभ कब होगा? सूर्य और गुरु की दशा का सटीक आकलन।"], "Parivarik Shanti": ["Family Peace", "पारिवारिक शांति"], "Ghar me klesh, vastu dosh aur grah shanti anushthan se ghar-parivar me sukh-samriddhi layein.": ["Bring happiness and prosperity home with remedies for family conflict, vastu dosh and graha shanti rituals.", "घर में क्लेश, वास्तु दोष और ग्रह शांति अनुष्ठान से घर-परिवार में सुख-समृद्धि लाएं।"], "Janam Patrika": ["Birth Chart", "जन्म पत्रिका"], "Vedic ganit dwara banayi gayi sampoorna Janam Patrika prapt karein.": ["Get your complete birth chart prepared with Vedic mathematics.", "वैदिक गणित से बनी संपूर्ण जन्म पत्रिका प्राप्त करें।"], "Consultation Plans": [null, "परामर्श प्लान"], "Apna Plan Chunein": ["Choose Your Plan", "अपना प्लान चुनें"], "Intro Offer": [null, "परिचय ऑफ़र"], "Most Popular": [null, "सबसे लोकप्रिय"], "🔒 Secured by Razorpay": [null, "🔒 Razorpay द्वारा सुरक्षित"], "15 Min Consultation": [null, "15 मिनट परामर्श"], "30 Min Consultation": [null, "30 मिनट परामर्श"], "45 Min Consultation": [null, "45 मिनट परामर्श"], "Intro offer for first-time clients": [null, "पहली बार आने वाले ग्राहकों के लिए"], "Detailed guidance on your key question": [null, "आपके मुख्य प्रश्न पर विस्तृत मार्गदर्शन"], "In-depth Kundli analysis & upay": [null, "गहन कुंडली विश्लेषण और उपाय"], "Choose Plan →": [null, "प्लान चुनें →"], "Plan par click karte hi secure Razorpay payment page khulega. Payment ke baad WhatsApp par apni Kundli details bhejein.": ["Clicking a plan opens a secure Razorpay payment page. After paying, send your Kundli details on WhatsApp.", "प्लान पर क्लिक करते ही सुरक्षित Razorpay पेमेंट पेज खुलेगा। भुगतान के बाद व्हाट्सऐप पर अपनी कुंडली की जानकारी भेजें।"], "Aasan Prakriya": ["Simple Process", "आसान प्रक्रिया"], "Sirf 3 Steps Mein Satik Paramarsh": ["Accurate Guidance in Just 3 Steps", "सिर्फ़ 3 स्टेप में सटीक परामर्श"], "Apni Janam Kundali Bhejein": ["Send Your Janam Kundali", "अपनी जन्म कुंडली भेजें"], "WhatsApp par apni Date of Birth, Time aur Place share karke apna sawal batayein.": ["Share your date, time and place of birth on WhatsApp and tell us your question.", "व्हाट्सऐप पर अपनी जन्म तिथि, समय और स्थान बताकर अपना प्रश्न बताएं।"], "Acharya Se Baat Karein": ["Talk to the Acharya", "आचार्य से बात करें"], "Hamare certified Acharya aapko call karke Dasha aur Grah Gochar ka vishleshan samjhayenge.": ["Our certified Acharya will call you and explain your Dasha and planetary transit analysis.", "हमारे प्रमाणित आचार्य आपको कॉल करके दशा और ग्रह गोचर का विश्लेषण समझाएंगे।"], "Satik Upay Payein": ["Get Accurate Remedies", "सटीक उपाय पाएं"], "Call ke baad WhatsApp par likhit summary aur saral Vedic upay turant prapt karein.": ["After the call, instantly receive a written summary and simple Vedic remedies on WhatsApp.", "कॉल के बाद व्हाट्सऐप पर लिखित सारांश और सरल वैदिक उपाय तुरंत पाएं।"], "Sache Anubhav": ["Real Experiences", "सच्चे अनुभव"], "Bharat Bhar Se Hamare Users Ki Raye": ["What Our Users Across India Say", "भारत भर से हमारे यूज़र्स की राय"], "Verified Consultation": [null, "सत्यापित परामर्श"], "Aksar Puche Jaane Wale Sawal": ["Frequently Asked Questions", "अक्सर पूछे जाने वाले प्रश्न"], "Consultation kaise hoti hai?": ["How does a consultation work?", "परामर्श कैसे होता है?"], "Apna plan chunein aur payment karein. Phir WhatsApp par Date of Birth, Time, Place aur apna sawal bhejein. Acharya aapko call par guidance denge aur baad mein WhatsApp par likhit summary milegi.": ["Choose your plan and pay. Then send your date, time and place of birth and your question on WhatsApp. The Acharya will guide you on a call, and you'll get a written summary on WhatsApp afterwards.", "अपना प्लान चुनें और भुगतान करें। फिर व्हाट्सऐप पर जन्म तिथि, समय, स्थान और अपना प्रश्न भेजें। आचार्य कॉल पर मार्गदर्शन देंगे और बाद में व्हाट्सऐप पर लिखित सारांश मिलेगा।"], "Mere liye kaunsa plan sahi hai?": ["Which plan is right for me?", "मेरे लिए कौन सा प्लान सही है?"], "15 min ek seedhe sawal ke liye, 30 min ek important sawal par detailed guidance ke liye, aur 45 min poori Kundli ke in-depth analysis aur upay ke liye hai.": ["15 min is for one quick question, 30 min for detailed guidance on one key question, and 45 min for an in-depth analysis of your full Kundli with remedies.", "15 मिनट एक सीधे प्रश्न के लिए, 30 मिनट एक अहम प्रश्न पर विस्तृत मार्गदर्शन के लिए, और 45 मिनट पूरी कुंडली के गहन विश्लेषण और उपायों के लिए है।"], "Kya payment safe hai?": ["Is the payment safe?", "क्या पेमेंट सुरक्षित है?"], "Payment Razorpay ke secure payment page par hota hai. Hum aapke card ya UPI ki details store nahi karte.": ["Payment is made on Razorpay's secure payment page. We do not store your card or UPI details.", "पेमेंट Razorpay के सुरक्षित पेज पर होता है। हम आपके कार्ड या UPI की जानकारी स्टोर नहीं करते।"], "Agar mujhe birth time nahi pata ho?": ["What if I don't know my birth time?", "अगर मुझे जन्म का समय नहीं पता हो?"], "Jitni jaankari ho utni bhejein, approximate time bhi. Acharya aapko batayenge ki us ke saath kya guidance di ja sakti hai.": ["Send whatever you know, even an approximate time. The Acharya will tell you what guidance is possible with it.", "जितनी जानकारी हो भेजें, अनुमानित समय भी। आचार्य बताएंगे कि उसके साथ क्या मार्गदर्शन दिया जा सकता है।"], "Kya meri jaankari private rahegi?": ["Will my information stay private?", "क्या मेरी जानकारी निजी रहेगी?"], "Haan. Aapki birth details aur baatcheet confidential rakhi jaati hain. Details ke liye:": ["Yes. Your birth details and conversations are kept confidential. For details, see:", "हाँ। आपकी जन्म जानकारी और बातचीत गोपनीय रखी जाती है। विवरण के लिए देखें:"], "Privacy Policy": [null, "प्राइवेसी पॉलिसी"], "Kya result ki guarantee hai?": ["Is any result guaranteed?", "क्या परिणाम की गारंटी है?"], "Jyotish Vedic parampara par based margdarshan hai, kisi specific result ki guarantee nahi li ja sakti. Refund ke liye:": ["Astrology is guidance based on Vedic tradition; no specific result can be guaranteed. For refunds, see:", "ज्योतिष वैदिक परंपरा पर आधारित मार्गदर्शन है; किसी विशेष परिणाम की गारंटी नहीं दी जा सकती। रिफंड के लिए देखें:"], "Refund Policy": [null, "रिफंड पॉलिसी"], "India's Trusted Vedic Astrology": [null, "भारत की विश्वसनीय वैदिक ज्योतिष सेवा"], "🛡️ 100% Confidential & Secure": [null, "🛡️ 100% गोपनीय और सुरक्षित"], "⚡ Certified Vedic Astrologer": [null, "⚡ प्रमाणित वैदिक ज्योतिषी"], "Follow @astrojakk on Instagram": [null, "इंस्टाग्राम पर @astrojakk को फ़ॉलो करें"], "FAQ": [null, "सामान्य प्रश्न"], "Help Center": [null, "सहायता केंद्र"], "Contact Us": [null, "संपर्क करें"], "Feedback": [null, "फ़ीडबैक"], "Terms of Service": [null, "सेवा की शर्तें"], "© 2026 ASTROJAK. All astrological consultations are strictly confidential and grounded in Vedic scriptures.": [null, "© 2026 ASTROJAK. सभी ज्योतिषीय परामर्श पूर्णतः गोपनीय हैं और वैदिक शास्त्रों पर आधारित हैं।"], "Get WhatsApp Call": [null, "व्हाट्सऐप कॉल पाएं"], "⭐ Feedback": [null, "⭐ फ़ीडबैक"], "Common problems aur unke jawab.": ["Common problems and their answers.", "आम समस्याएं और उनके समाधान।"], "Booking kaise karein?": ["How do I book?", "बुकिंग कैसे करें?"], "Plans section se plan chunein, payment karein, phir WhatsApp par apni birth details bhejein.": ["Choose a plan from the Plans section, pay, then send your birth details on WhatsApp.", "प्लान सेक्शन से प्लान चुनें, भुगतान करें, फिर व्हाट्सऐप पर जन्म जानकारी भेजें।"], "Payment ho gaya par confirmation nahi mila": ["I paid but got no confirmation", "भुगतान हो गया पर पुष्टि नहीं मिली"], "WhatsApp par payment ka screenshot bhejein. Agar paise kat gaye hain aur booking confirm nahi hui, to email par transaction details bhejein.": ["Send the payment screenshot on WhatsApp. If money was debited and the booking isn't confirmed, email us the transaction details.", "व्हाट्सऐप पर पेमेंट का स्क्रीनशॉट भेजें। अगर पैसे कट गए हैं और बुकिंग कन्फर्म नहीं हुई, तो ईमेल पर ट्रांज़ैक्शन की जानकारी भेजें।"], "Time reschedule karna hai": ["I need to reschedule", "समय बदलना है"], "Jitna jaldi ho sake WhatsApp ya email se batayein. Hum availability ke hisaab se naya time denge.": ["Tell us on WhatsApp or email as soon as possible. We'll offer a new time based on availability.", "जितनी जल्दी हो सके व्हाट्सऐप या ईमेल से बताएं। हम उपलब्धता के अनुसार नया समय देंगे।"], "Refund chahiye": ["I want a refund", "रिफंड चाहिए"], "Zaroorat ho to email karein. Niyam:": ["Email us if needed. Rules:", "ज़रूरत हो तो ईमेल करें। नियम:"], "Kundli ke liye kya details chahiye?": ["What details are needed for a Kundli?", "कुंडली के लिए कौन सी जानकारी चाहिए?"], "Date of Birth, Birth Time, Birth Place aur aapka sawal.": ["Date of birth, birth time, birth place and your question.", "जन्म तिथि, जन्म समय, जन्म स्थान और आपका प्रश्न।"], "Read FAQ": [null, "सामान्य प्रश्न पढ़ें"], "Hum aapki madad ke liye yahan hain.": ["We're here to help you.", "हम आपकी मदद के लिए यहाँ हैं।"], "WhatsApp: +91 78276 73637": [null, "व्हाट्सऐप: +91 78276 73637"], "Email: astrojak10@gmail.com": [null, "ईमेल: astrojak10@gmail.com"], "Instagram: @astrojakk": [null, "इंस्टाग्राम: @astrojakk"], "Rate Your Experience": [null, "अपना अनुभव रेट करें"], "Aapka feedback hamari team tak jaata hai.": ["Your feedback goes to our team.", "आपका फ़ीडबैक हमारी टीम तक जाता है।"], "Name": [null, "नाम"], "Phone Number (Optional)": [null, "फ़ोन नंबर (वैकल्पिक)"], "Send Feedback": [null, "फ़ीडबैक भेजें"], "Dhanyavaad! Aapka feedback mil gaya.": ["Thank you! We've received your feedback.", "धन्यवाद! आपका फ़ीडबैक मिल गया।"]};
+      var nodes = [], norm = function (t) { return t.replace(/\s+/g, ' ').trim(); };
+      var w = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, { acceptNode: function (n) {
+        var p = n.parentElement;
+        if (!p || p.closest('script,style,.policy-page')) return NodeFilter.FILTER_REJECT;
+        return TR.hasOwnProperty(norm(n.nodeValue)) ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_REJECT;
+      } });
+      while (w.nextNode()) nodes.push({ n: w.currentNode, o: w.currentNode.nodeValue, k: norm(w.currentNode.nodeValue) });
+
+      var btns = document.querySelectorAll('[data-lang]');
+      function setLang(l) {
+        nodes.forEach(function (x) {
+          var t = TR[x.k], v = l === 'en' ? t[0] : l === 'hi' ? t[1] : null;
+          x.n.nodeValue = v == null ? x.o : (/^\s/.test(x.o) ? ' ' : '') + v + (/\s$/.test(x.o) ? ' ' : '');
+        });
+        document.documentElement.lang = l === 'hi' ? 'hi' : 'en-IN';
+        btns.forEach(function (b) { var on = b.getAttribute('data-lang') === l; b.classList.toggle('on', on); b.setAttribute('aria-pressed', on); });
+        try { localStorage.setItem('lang', l); } catch (e) {}
+        if (window.gtag) gtag('event', 'language_change', { language: l });
+      }
+      btns.forEach(function (b) { b.addEventListener('click', function () { setLang(b.getAttribute('data-lang')); }); });
+      var saved = 'en'; try { saved = localStorage.getItem('lang') || 'en'; } catch (e) {}
+      if (saved !== 'hing') setLang(saved);
+
+      // header shadow on scroll
+      var hd = document.querySelector('.site-header');
+      window.addEventListener('scroll', function () { hd.classList.toggle('scrolled', window.scrollY > 8); }, { passive: true });
+
+      // scroll reveal + stat count-up
+      function count(el) {
+        var m = el.textContent.match(/^([\d.]+)(.*)$/); if (!m) return;
+        var end = parseFloat(m[1]), dec = (m[1].split('.')[1] || '').length, t0 = null, full = el.textContent;
+        (function tick(t) {
+          if (t0 === null) t0 = t; var p = Math.min((t - t0) / 1300, 1), e = 1 - Math.pow(1 - p, 3);
+          el.textContent = p < 1 ? (end * e).toFixed(dec) + m[2] : full;
+          if (p < 1) requestAnimationFrame(tick);
+        })(performance.now());
+      }
+      if ('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        var io = new IntersectionObserver(function (es) {
+          es.forEach(function (e) {
+            if (!e.isIntersecting) return;
+            var el = e.target; io.unobserve(el); el.classList.add('in');
+            if (el.classList.contains('stat-item')) count(el.querySelector('.stat-number'));
+            setTimeout(function () { el.classList.remove('rv', 'in'); }, 1200); // hand hover transitions back to the original styles
+          });
+        }, { threshold: 0.15 });
+        document.querySelectorAll('.section-title-wrap,.stat-item,.service-card,.plan-card,.step-card,.review-card,.faq-list details').forEach(function (el) {
+          el.style.setProperty('--d', Math.min([].indexOf.call(el.parentNode.children, el), 5) * 0.08 + 's');
+          el.classList.add('rv'); io.observe(el);
+        });
+      }
+    })();
+  </script>
 
 </body>
 </html>
