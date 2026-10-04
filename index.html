@@ -988,7 +988,8 @@
     .plan-price s { font-size: 18px; font-weight: 600; color: var(--text-light); margin-right: 6px; }
     .plan-note { font-size: 12.5px; color: var(--text-muted); margin-bottom: 20px; }
     .plan-btn { margin-top: auto; width: 100%; background: var(--whatsapp-green); color: #fff; font-size: 14.5px; font-weight: 800; padding: 12px 16px; border-radius: 14px; box-shadow: 0 4px 16px rgba(37, 211, 102, 0.35); }
-    .plan-card:hover .plan-btn { background: var(--whatsapp-dark); }
+    .plan-pay { margin: auto 0 0; width: 100%; display: flex; justify-content: center; }
+    .plan-card { cursor: default; }
     .plans-foot { text-align: center; font-size: 12.5px; color: var(--text-light); margin-top: 24px; }
     .plans-foot a, .footer-links a { color: inherit; }
 
@@ -1353,30 +1354,30 @@
         <h2 class="section-main-heading">Apna Plan Chunein</h2>
       </div>
       <div class="plans-grid">
-        <a href="https://rzp.io/rzp/zHGSDp4u" class="plan-card" data-plan="15 min" target="_blank" rel="noopener noreferrer">
+        <div class="plan-card" data-plan="15 min">
           <span class="plan-badge">Intro Offer</span>
           <div class="plan-emoji">⭐</div>
           <div class="plan-duration">15 Min Consultation</div>
           <div class="plan-price"><s>₹299</s>₹49</div>
           <div class="plan-note">Intro offer for first-time clients</div>
-          <span class="plan-btn">Choose Plan &rarr;</span>
-        </a>
-        <a href="https://rzp.io/rzp/DmAa5ot" class="plan-card plan-featured" data-plan="30 min" target="_blank" rel="noopener noreferrer">
+          <form class="plan-pay"><script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_Tjk2VfkHdzHD0z" async> </script> </form>
+        </div>
+        <div class="plan-card plan-featured" data-plan="30 min">
           <span class="plan-badge">Most Popular</span>
           <div class="plan-emoji">💫</div>
           <div class="plan-duration">30 Min Consultation</div>
           <div class="plan-price">₹499</div>
           <div class="plan-note">Detailed guidance on your key question</div>
-          <span class="plan-btn">Choose Plan &rarr;</span>
-        </a>
-        <a href="https://rzp.io/rzp/rk8wwbiR" class="plan-card" data-plan="45 min" target="_blank" rel="noopener noreferrer">
+          <form class="plan-pay"><script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_Tjk8wYUcI8zh08" async> </script> </form>
+        </div>
+        <div class="plan-card" data-plan="45 min">
           
           <div class="plan-emoji">🌟</div>
           <div class="plan-duration">45 Min Consultation</div>
           <div class="plan-price">₹999</div>
           <div class="plan-note">In-depth Kundli analysis &amp; upay</div>
-          <span class="plan-btn">Choose Plan &rarr;</span>
-        </a>
+          <form class="plan-pay"><script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_TjkDoSp6poJXeS" async> </script> </form>
+        </div>
       </div>
       <p class="secure-line">🔒 Secured by Razorpay</p>
       <p class="plans-foot">Plan par click karte hi secure Razorpay payment page khulega. Payment ke baad WhatsApp par apni Kundli details bhejein. <a href="#refund-policy">Refund Policy</a></p>
@@ -1712,6 +1713,8 @@
         var c = e.target.closest('[data-close]');
         if (c) { c.closest('dialog').close(); return; }
         if (e.target.tagName === 'DIALOG') { e.target.close(); return; }
+        var pb = e.target.closest('.plan-pay');
+        if (pb) { track('begin_checkout', { plan: pb.closest('.plan-card').getAttribute('data-plan') }); return; }
         var a = e.target.closest('a');
         if (a && a.href.indexOf('rzp.io') > -1) track('begin_checkout', { plan: a.getAttribute('data-plan') });
         else if (a && a.href.indexOf('wa.me') > -1) track('whatsapp_click');
