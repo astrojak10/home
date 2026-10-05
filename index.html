@@ -1105,6 +1105,8 @@
     .plans-foot a, .footer-links a { color: inherit; }
 
     .btn-hero-secondary { background: #FFFFFF; color: var(--saffron-dark); border: 2px solid var(--primary-yellow); text-decoration: none; padding: 14px 28px; border-radius: 16px; font-size: 16px; font-weight: 800; display: inline-flex; align-items: center; justify-content: center; transition: all 0.25s ease; }
+    .btn-hero-book { background: var(--gold-gradient); color: #3D2600; text-decoration: none; padding: 14px 28px; border-radius: 16px; font-size: 16px; font-weight: 800; text-align: center; box-shadow: 0 6px 18px rgba(255, 111, 0, 0.28); transition: transform 0.2s; }
+    .btn-hero-book:hover { transform: translateY(-2px); }
     .btn-hero-secondary:hover { background: #FFF5D2; transform: translateY(-2px); }
 
     /* FOOTER EXTRAS */
@@ -1155,7 +1157,7 @@
     .stars input:focus-visible + label { outline: 2px solid var(--saffron-accent); border-radius: 6px; }
     .fb-fab { position: fixed; bottom: 28px; left: 28px; z-index: 998; background: #fff; color: var(--saffron-dark); border: 2px solid var(--primary-yellow); border-radius: var(--radius-full); padding: 11px 18px; font: inherit; font-size: 14px; font-weight: 800; cursor: pointer; box-shadow: var(--shadow-md); }
     .fb-fab:hover { background: #FFF5D2; }
-    @media (max-width: 768px) { .fb-fab { bottom: 84px; left: 16px; padding: 9px 14px; font-size: 13px; } }
+    @media (max-width: 768px) { .fb-fab { bottom: 20px; left: 16px; padding: 9px 14px; font-size: 13px; } }
 
     /* LANGUAGE SWITCH */
     .lang-switch { display: flex; background: #FFF5D2; border: 1.5px solid var(--border-accent); border-radius: var(--radius-full); padding: 3px; }
@@ -1228,6 +1230,47 @@
       .brand-title { font-size: 18px; }
       .lang-switch button { padding: 5px 7px; font-size: 10.5px; }
     }
+
+    /* BOOK PAGE */
+#book a{color:var(--saffron-dark)}
+#book .bk-wrap{max-width:560px;margin:0 auto;padding:0 16px}
+#book .tag{text-align:center;margin-top:26px;font-size:12px;font-weight:800;letter-spacing:3px;color:var(--saffron-dark)}
+#book .crumb{text-align:center;font-size:13px;color:var(--text-muted);margin-top:4px}
+#book h1{text-align:center;font-size:28px;line-height:1.25;margin:10px 0 20px;font-weight:800}
+#book .bk-card{background:#fff;border:1.5px solid var(--border-accent);border-radius:20px;padding:20px;box-shadow:var(--shadow-md)}
+#book label{display:block;font-size:14px;font-weight:600;color:var(--text-muted);margin:14px 0 6px}
+#book label:first-child{margin-top:0}
+#book input, #book select{width:100%;font:inherit;font-size:16px;padding:13px 14px;border:1.5px solid var(--border-warm);border-radius:14px;background:#fff;color:var(--text-charcoal)}
+#book input:focus, #book select:focus{outline:none;border-color:var(--saffron-accent)}
+#book .row{display:flex;gap:10px;flex-wrap:wrap}
+#book .row select{flex:1;min-width:80px}
+#book .row .sep{align-self:center;font-weight:700}
+#book .sum{margin-top:18px;background:var(--bg-cream);border:1px solid var(--border-warm);border-radius:14px;padding:14px 16px}
+#book .sum b{color:var(--saffron-accent);font-size:22px}
+#book .bk-pay{display:block;width:100%;margin-top:16px;border:0;border-radius:14px;padding:15px;font:inherit;font-weight:800;font-size:15px;letter-spacing:1.5px;text-transform:uppercase;color:#fff;background:var(--gold-gradient);box-shadow:0 6px 18px rgba(255,111,0,.3);cursor:pointer}
+#book .bk-pay:disabled{opacity:.7}
+#book .fine{text-align:center;font-size:13px;color:var(--text-muted);margin-top:12px}
+#book .hid{position:absolute;left:-9999px;top:0;width:1px;height:1px;overflow:hidden}
+#book .intro{text-align:center;margin:22px 0 10px;font-size:16px}
+#book .wa{display:flex;align-items:center;justify-content:center;gap:8px;margin:18px 0 0;background:var(--whatsapp-green);color:#fff;text-decoration:none;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;font-size:14px;padding:14px;border-radius:14px}
+#book h2{text-align:center;font-size:24px;margin:44px 0 6px;font-weight:800}
+#book .sub{text-align:center;color:var(--text-muted);font-size:14px;margin-bottom:16px}
+#book .tbl{overflow-x:auto;background:#fff;border:1.5px solid var(--border-warm);border-radius:16px}
+#book table{width:100%;border-collapse:collapse;min-width:460px;font-size:14px}
+#book th{background:#FFF1C9;border-bottom:2px solid var(--primary-yellow);padding:12px 8px;font-size:12px;letter-spacing:.5px;text-transform:uppercase;color:var(--saffron-dark)}
+#book th:first-child, #book td:first-child{text-align:left;padding-left:14px}
+#book td{padding:12px 8px;text-align:center;border-bottom:1px solid var(--border-warm)}
+#book tr:last-child td{border-bottom:0}
+#book th.f, #book td.f{background:#FFFAEB}
+#book .y{color:#1B8A3A;font-weight:700}
+#book .n{color:#aaa}
+#book .bk-faq details{background:#fff;border:1.5px solid var(--border-warm);border-radius:16px;padding:16px 18px;margin-bottom:12px}
+#book .bk-faq summary{font-weight:700;cursor:pointer;color:var(--text-charcoal);list-style:none;display:flex;justify-content:space-between;gap:12px}
+#book .bk-faq summary::after{content:'+';color:var(--saffron-accent);font-size:20px;line-height:1}
+#book .bk-faq details[open] summary::after{content:'×'}
+#book .bk-faq p{margin-top:10px;color:var(--text-muted);font-size:15px}
+#book .bk-wrap h1{margin-top:10px;padding:0;border:0}
+#book .bk-wrap{padding-top:8px}
   </style>
 </head>
 <body>
@@ -1327,8 +1370,9 @@
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
               </svg>
-              <span>WhatsApp Chat</span>
+              <span>Book on WhatsApp</span>
             </a>
+            <a href="#book" class="btn-hero-book">Book online consultation</a>
             <a href="#plans" class="btn-hero-secondary">View Plans</a>
           </div>
 
@@ -1491,7 +1535,7 @@
         </div>
       </div>
       <p class="secure-line">🔒 Secured by Razorpay</p>
-      <p class="plans-foot">Plan par click karte hi secure Razorpay payment page khulega. Payment ke baad WhatsApp par apni Kundli details bhejein. <a href="#refund-policy">Refund Policy</a></p>
+      <p class="plans-foot">Plan par click karte hi secure Razorpay payment page khulega. Payment ke baad WhatsApp par apni Kundli details bhejein. <a href="#refund-policy">Refund Policy</a> · <a href="#book">Book with details</a></p>
     </div>
   </section>
 
@@ -1633,6 +1677,7 @@
       </a>
 
       <div class="footer-links">
+        <a href="#book">Book Consultation</a>
         <a href="#faq">FAQ</a>
         <a href="#help" data-dialog="help">Help Center</a>
         <a href="#contact" data-dialog="contact">Contact Us</a>
@@ -1648,17 +1693,78 @@
     </div>
   </footer>
 
-  <!-- 9. FLOATING WHATSAPP CTA -->
-  <a href="https://wa.me/917827673637?text=Hi!%20I%20want%20to%20book%20astrology%20consultation." 
-     class="floating-whatsapp-btn" 
-     id="floatingWhatsAppBtn"
-     target="_blank" 
-     rel="noopener noreferrer">
-    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
-    </svg>
-    <span>Get WhatsApp Call</span>
-  </a>
+  <!-- BOOK CONSULTATION -->
+  <div class="policy-page" id="book">
+    <div class="container">
+      <div class="bk-wrap"><a href="#" class="policy-back">&larr; Back to Home</a></div>
+      <div class="bk-wrap">
+<div class="tag">CONSULTATION</div>
+<div class="crumb"><a href="#">Home</a> › Book Consultation</div>
+<h1>Book Consultation with Acharya Narender Ji</h1>
+
+<div class="bk-card">
+  <label for="bk-plan">Choose consultation option</label>
+  <select id="bk-plan">
+    <option value="15">15 Minutes — ₹49 (Intro Offer)</option>
+    <option value="30" selected>30 Minutes — ₹499</option>
+    <option value="45">45 Minutes — ₹999</option>
+  </select>
+
+  <label for="bk-name">Your name (optional)</label>
+  <input id="bk-name" type="text" autocomplete="name">
+  <label for="bk-phone">Phone / WhatsApp number (optional)</label>
+  <input id="bk-phone" type="tel" autocomplete="tel">
+  <label for="bk-email">Email address (optional)</label>
+  <input id="bk-email" type="email" autocomplete="email">
+
+  <label>Date of birth (optional)</label>
+  <div class="row"><select id="bk-yy"><option value="">Year</option></select><select id="bk-mm"><option value="">Month</option></select><select id="bk-dd"><option value="">Day</option></select></div>
+
+  <label>Exact birth time (optional)</label>
+  <div class="row"><select id="bk-hh"><option value="">HH</option></select><span class="sep">:</span><select id="bk-mi"><option value="">MM</option></select><select id="bk-ap"><option value="">--</option><option>AM</option><option>PM</option></select></div>
+
+  <label for="bk-place">Birth place (optional)</label>
+  <input id="bk-place" type="text" placeholder="City, State, Country">
+
+  <div class="sum">Selected: <span id="bk-sel"></span><br>Amount payable: <b id="bk-amt"></b></div>
+  <button class="bk-pay" id="bk-pay" type="button">Pay Securely</button>
+  <p class="fine"><span id="bk-fine"></span> · secure Razorpay checkout · UPI, cards and netbanking · after payment, share your birth details on WhatsApp</p>
+  <div class="hid" id="bk-rz" aria-hidden="true"></div>
+</div>
+
+<p class="intro">A <b>consultation with Acharya Narender Ji</b> is a personal reading of your Kundli by phone and WhatsApp. Pick the duration that suits your question, pay once, and get honest Vedic guidance with a clear upay.</p>
+<a class="wa" href="https://wa.me/917827673637?text=Hi!%20I%20want%20to%20book%20astrology%20consultation." target="_blank" rel="noopener">WhatsApp us</a>
+
+<h2>What You Get</h2>
+<p class="sub">Compare the three consultation plans</p>
+<div class="tbl"><table>
+<thead><tr><th>What you get</th><th>15 Min</th><th class="f">30 Min</th><th>45 Min</th></tr></thead>
+<tbody>
+<tr><td>Price</td><td>₹49</td><td class="f">₹499</td><td>₹999</td></tr>
+<tr><td>Live call / WhatsApp with Acharya</td><td class="y">✔</td><td class="y f">✔</td><td class="y">✔</td></tr>
+<tr><td>One direct question answered</td><td class="y">✔</td><td class="y f">✔</td><td class="y">✔</td></tr>
+<tr><td>Detailed guidance on your key question</td><td class="n">—</td><td class="y f">✔</td><td class="y">✔</td></tr>
+<tr><td>Dasha &amp; timing guidance</td><td class="n">—</td><td class="y f">✔</td><td class="y">✔</td></tr>
+<tr><td>Written summary on WhatsApp</td><td class="n">—</td><td class="y f">✔</td><td class="y">✔</td></tr>
+<tr><td>Complete in-depth Kundli analysis</td><td class="n">—</td><td class="n f">—</td><td class="y">✔</td></tr>
+<tr><td>Personal upay (remedies)</td><td class="n">—</td><td class="n f">—</td><td class="y">✔</td></tr>
+<tr><td>Best for</td><td>A quick, simple doubt</td><td class="f">One important decision</td><td>Full life review</td></tr>
+</tbody></table></div>
+<p class="fine">Flat fee per plan. No hidden charges, no upsells.</p>
+
+<h2>Common Questions</h2>
+<div class="bk-faq" style="margin-top:16px">
+<details><summary>How does the consultation work?</summary><p>Choose your plan and pay. Then send your date of birth, time, place and question on WhatsApp. Acharya Narender Ji guides you on call, and you receive a written summary on WhatsApp afterwards.</p></details>
+<details><summary>Which plan is right for me?</summary><p>15 minutes suits one direct question. 30 minutes gives detailed guidance on one important question. 45 minutes covers your full Kundli in depth, along with upay.</p></details>
+<details><summary>Is payment safe?</summary><p>Yes. Payment happens on Razorpay's secure page. We never store your card or UPI details.</p></details>
+<details><summary>What if I don't know my birth time?</summary><p>Share whatever you know, even an approximate time. Acharya will explain what guidance is possible with it.</p></details>
+<details><summary>Do I have to fill the form before paying?</summary><p>No, every field is optional. You can pay first and send your details on WhatsApp.</p></details>
+<details><summary>Is my information private?</summary><p>Yes. Your birth details and conversation are kept confidential.</p></details>
+<details><summary>Is a result guaranteed?</summary><p>Astrology is guidance based on Vedic tradition, so no specific result can be guaranteed. See our Refund Policy for refund terms.</p></details>
+</div>
+</div>
+    </div>
+  </div>
 
   <div class="policy-page" id="refund-policy">
     <div class="container">
@@ -1852,7 +1958,7 @@
 
   <script>
     (function () {
-      var TR = {"Neeraj from Mumbai booked consultation just now": [null, "नीरज (मुंबई) ने अभी परामर्श बुक किया"], "Neha from Delhi consulted our Jyotish for Marriage Yog": [null, "नेहा (दिल्ली) ने विवाह योग के लिए ज्योतिषी से परामर्श लिया"], "Vikram from Pune got Career Kundli read": [null, "विक्रम (पुणे) ने करियर कुंडली देखी"], "Priya from Bengaluru unlocked Love Compatibility": [null, "प्रिया (बेंगलुरु) ने लव कंपैटिबिलिटी देखी"], "Amit from Jaipur consulted for Shani Sade Sati": [null, "अमित (जयपुर) ने शनि साढ़ेसाती पर परामर्श लिया"], "India's Platform for Astrology consultation": [null, "ज्योतिष परामर्श का भारतीय प्लेटफ़ॉर्म"], "Acharya Online": [null, "आचार्य ऑनलाइन"], "Chat on WhatsApp": [null, "व्हाट्सऐप पर चैट करें"], "✨ Book Consultation": [null, "✨ परामर्श बुक करें"], "Apne Bhavishya Ka": ["Get Accurate", "अपने भविष्य का"], "Satik Margdarshan": ["Guidance", "सटीक मार्गदर्शन"], "Payein": ["For Your Future", "पाएं"], "Janam Kundali, Vivah Yog, Love Life aur Career ki har uljhan ka shuddh Vedic upay. India ke certified Vedic Astrologers se seedhe WhatsApp par guidance lein.": ["Pure Vedic remedies for every worry in your Janam Kundali, marriage, love life and career. Get guidance directly on WhatsApp from India's certified Vedic astrologers.", "जन्म कुंडली, विवाह योग, लव लाइफ और करियर की हर उलझन का शुद्ध वैदिक उपाय। भारत के प्रमाणित वैदिक ज्योतिषियों से सीधे व्हाट्सऐप पर मार्गदर्शन लें।"], "WhatsApp Chat": [null, "व्हाट्सऐप चैट"], "View Plans": [null, "प्लान देखें"], "⚡ 30s Instant Connect": [null, "⚡ 30 सेकंड में कनेक्ट"], "🔒 100% Private": [null, "🔒 100% गोपनीय"], "🕉️ Genuine Remedies": [null, "🕉️ प्रामाणिक उपाय"], "Top Verified Astrologer": [null, "शीर्ष सत्यापित ज्योतिषी"], "Acharya Narender Ji": [null, "आचार्य नरेंद्र जी"], "Verified": [null, "सत्यापित"], "Kundli Vishleshan & Vivah Yog Specialist": ["Kundli Analysis & Marriage Yog Specialist", "कुंडली विश्लेषण और विवाह योग विशेषज्ञ"], "(15,200+ Reviews)": [null, "(15,200+ समीक्षाएं)"], "16+ Yrs Exp": ["16+ Years Exp", "16+ वर्ष अनुभव"], "Vedic Jyotish, Shani Sade Sati, Kundli dosh aur Vivah yog ke satik paramarsh ke liye Bharat ke jaane-maane Vedic vidwan.": ["A well-known Vedic scholar of India for accurate guidance on Vedic astrology, Shani Sade Sati, Kundli doshas and marriage yog.", "वैदिक ज्योतिष, शनि साढ़ेसाती, कुंडली दोष और विवाह योग के सटीक परामर्श के लिए भारत के जाने-माने वैदिक विद्वान।"], "Acharya Narender Ji Se WhatsApp Par Baat Karein": ["Chat with Acharya Narender Ji on WhatsApp", "आचार्य नरेंद्र जी से व्हाट्सऐप पर बात करें"], "Users Guided Across India": [null, "भारत भर में मार्गदर्शन पाए यूज़र्स"], "Daily Consultations": [null, "रोज़ाना परामर्श"], "Client Satisfaction Rate": [null, "ग्राहक संतुष्टि दर"], "Rating (15,200+ Reviews)": [null, "रेटिंग (15,200+ समीक्षाएं)"], "Hamari Pramukh Sevayein": ["Our Key Services", "हमारी प्रमुख सेवाएं"], "Popular Vedic Astrology Categories": [null, "लोकप्रिय वैदिक ज्योतिष श्रेणियां"], "Love & Vivah Yog": ["Love & Marriage Yog", "लव और विवाह योग"], "Shadi kab hogi? Kundli matching, Manglik Dosh aur Prem me aa rahi har badha ka satik Vedic nidaan.": ["When will marriage happen? Kundli matching, Manglik Dosh and accurate Vedic solutions for every obstacle in love.", "शादी कब होगी? कुंडली मिलान, मांगलिक दोष और प्रेम में आ रही हर बाधा का सटीक वैदिक निदान।"], "WhatsApp Par Poochhein →": ["Ask on WhatsApp →", "व्हाट्सऐप पर पूछें →"], "Career & Vyapar": ["Career & Business", "करियर और व्यापार"], "Nayi job, promotion ya business me labh kab hoga? Surya aur Guru ki dasha ka satik aakalan.": ["When will a new job, promotion or business profit come? Accurate analysis of Surya and Guru dasha.", "नई जॉब, प्रमोशन या बिज़नेस में लाभ कब होगा? सूर्य और गुरु की दशा का सटीक आकलन।"], "Parivarik Shanti": ["Family Peace", "पारिवारिक शांति"], "Ghar me klesh, vastu dosh aur grah shanti anushthan se ghar-parivar me sukh-samriddhi layein.": ["Bring happiness and prosperity home with remedies for family conflict, vastu dosh and graha shanti rituals.", "घर में क्लेश, वास्तु दोष और ग्रह शांति अनुष्ठान से घर-परिवार में सुख-समृद्धि लाएं।"], "Janam Patrika": ["Birth Chart", "जन्म पत्रिका"], "Vedic ganit dwara banayi gayi sampoorna Janam Patrika prapt karein.": ["Get your complete birth chart prepared with Vedic mathematics.", "वैदिक गणित से बनी संपूर्ण जन्म पत्रिका प्राप्त करें।"], "Consultation Plans": [null, "परामर्श प्लान"], "Apna Plan Chunein": ["Choose Your Plan", "अपना प्लान चुनें"], "Intro Offer": [null, "परिचय ऑफ़र"], "Most Popular": [null, "सबसे लोकप्रिय"], "🔒 Secured by Razorpay": [null, "🔒 Razorpay द्वारा सुरक्षित"], "15 Min Consultation": [null, "15 मिनट परामर्श"], "30 Min Consultation": [null, "30 मिनट परामर्श"], "45 Min Consultation": [null, "45 मिनट परामर्श"], "Intro offer for first-time clients": [null, "पहली बार आने वाले ग्राहकों के लिए"], "Detailed guidance on your key question": [null, "आपके मुख्य प्रश्न पर विस्तृत मार्गदर्शन"], "In-depth Kundli analysis & upay": [null, "गहन कुंडली विश्लेषण और उपाय"], "Choose Plan →": [null, "प्लान चुनें →"], "Plan par click karte hi secure Razorpay payment page khulega. Payment ke baad WhatsApp par apni Kundli details bhejein.": ["Clicking a plan opens a secure Razorpay payment page. After paying, send your Kundli details on WhatsApp.", "प्लान पर क्लिक करते ही सुरक्षित Razorpay पेमेंट पेज खुलेगा। भुगतान के बाद व्हाट्सऐप पर अपनी कुंडली की जानकारी भेजें।"], "Aasan Prakriya": ["Simple Process", "आसान प्रक्रिया"], "Sirf 3 Steps Mein Satik Paramarsh": ["Accurate Guidance in Just 3 Steps", "सिर्फ़ 3 स्टेप में सटीक परामर्श"], "Apni Janam Kundali Bhejein": ["Send Your Janam Kundali", "अपनी जन्म कुंडली भेजें"], "WhatsApp par apni Date of Birth, Time aur Place share karke apna sawal batayein.": ["Share your date, time and place of birth on WhatsApp and tell us your question.", "व्हाट्सऐप पर अपनी जन्म तिथि, समय और स्थान बताकर अपना प्रश्न बताएं।"], "Acharya Se Baat Karein": ["Talk to the Acharya", "आचार्य से बात करें"], "Hamare certified Acharya aapko call karke Dasha aur Grah Gochar ka vishleshan samjhayenge.": ["Our certified Acharya will call you and explain your Dasha and planetary transit analysis.", "हमारे प्रमाणित आचार्य आपको कॉल करके दशा और ग्रह गोचर का विश्लेषण समझाएंगे।"], "Satik Upay Payein": ["Get Accurate Remedies", "सटीक उपाय पाएं"], "Call ke baad WhatsApp par likhit summary aur saral Vedic upay turant prapt karein.": ["After the call, instantly receive a written summary and simple Vedic remedies on WhatsApp.", "कॉल के बाद व्हाट्सऐप पर लिखित सारांश और सरल वैदिक उपाय तुरंत पाएं।"], "Sache Anubhav": ["Real Experiences", "सच्चे अनुभव"], "Bharat Bhar Se Hamare Users Ki Raye": ["What Our Users Across India Say", "भारत भर से हमारे यूज़र्स की राय"], "Verified Consultation": [null, "सत्यापित परामर्श"], "Aksar Puche Jaane Wale Sawal": ["Frequently Asked Questions", "अक्सर पूछे जाने वाले प्रश्न"], "Consultation kaise hoti hai?": ["How does a consultation work?", "परामर्श कैसे होता है?"], "Apna plan chunein aur payment karein. Phir WhatsApp par Date of Birth, Time, Place aur apna sawal bhejein. Acharya aapko call par guidance denge aur baad mein WhatsApp par likhit summary milegi.": ["Choose your plan and pay. Then send your date, time and place of birth and your question on WhatsApp. The Acharya will guide you on a call, and you'll get a written summary on WhatsApp afterwards.", "अपना प्लान चुनें और भुगतान करें। फिर व्हाट्सऐप पर जन्म तिथि, समय, स्थान और अपना प्रश्न भेजें। आचार्य कॉल पर मार्गदर्शन देंगे और बाद में व्हाट्सऐप पर लिखित सारांश मिलेगा।"], "Mere liye kaunsa plan sahi hai?": ["Which plan is right for me?", "मेरे लिए कौन सा प्लान सही है?"], "15 min ek seedhe sawal ke liye, 30 min ek important sawal par detailed guidance ke liye, aur 45 min poori Kundli ke in-depth analysis aur upay ke liye hai.": ["15 min is for one quick question, 30 min for detailed guidance on one key question, and 45 min for an in-depth analysis of your full Kundli with remedies.", "15 मिनट एक सीधे प्रश्न के लिए, 30 मिनट एक अहम प्रश्न पर विस्तृत मार्गदर्शन के लिए, और 45 मिनट पूरी कुंडली के गहन विश्लेषण और उपायों के लिए है।"], "Kya payment safe hai?": ["Is the payment safe?", "क्या पेमेंट सुरक्षित है?"], "Payment Razorpay ke secure payment page par hota hai. Hum aapke card ya UPI ki details store nahi karte.": ["Payment is made on Razorpay's secure payment page. We do not store your card or UPI details.", "पेमेंट Razorpay के सुरक्षित पेज पर होता है। हम आपके कार्ड या UPI की जानकारी स्टोर नहीं करते।"], "Agar mujhe birth time nahi pata ho?": ["What if I don't know my birth time?", "अगर मुझे जन्म का समय नहीं पता हो?"], "Jitni jaankari ho utni bhejein, approximate time bhi. Acharya aapko batayenge ki us ke saath kya guidance di ja sakti hai.": ["Send whatever you know, even an approximate time. The Acharya will tell you what guidance is possible with it.", "जितनी जानकारी हो भेजें, अनुमानित समय भी। आचार्य बताएंगे कि उसके साथ क्या मार्गदर्शन दिया जा सकता है।"], "Kya meri jaankari private rahegi?": ["Will my information stay private?", "क्या मेरी जानकारी निजी रहेगी?"], "Haan. Aapki birth details aur baatcheet confidential rakhi jaati hain. Details ke liye:": ["Yes. Your birth details and conversations are kept confidential. For details, see:", "हाँ। आपकी जन्म जानकारी और बातचीत गोपनीय रखी जाती है। विवरण के लिए देखें:"], "Privacy Policy": [null, "प्राइवेसी पॉलिसी"], "Kya result ki guarantee hai?": ["Is any result guaranteed?", "क्या परिणाम की गारंटी है?"], "Jyotish Vedic parampara par based margdarshan hai, kisi specific result ki guarantee nahi li ja sakti. Refund ke liye:": ["Astrology is guidance based on Vedic tradition; no specific result can be guaranteed. For refunds, see:", "ज्योतिष वैदिक परंपरा पर आधारित मार्गदर्शन है; किसी विशेष परिणाम की गारंटी नहीं दी जा सकती। रिफंड के लिए देखें:"], "Refund Policy": [null, "रिफंड पॉलिसी"], "India's Trusted Vedic Astrology": [null, "भारत की विश्वसनीय वैदिक ज्योतिष सेवा"], "🛡️ 100% Confidential & Secure": [null, "🛡️ 100% गोपनीय और सुरक्षित"], "⚡ Certified Vedic Astrologer": [null, "⚡ प्रमाणित वैदिक ज्योतिषी"], "Follow @astrojakk on Instagram": [null, "इंस्टाग्राम पर @astrojakk को फ़ॉलो करें"], "FAQ": [null, "सामान्य प्रश्न"], "Help Center": [null, "सहायता केंद्र"], "Contact Us": [null, "संपर्क करें"], "Feedback": [null, "फ़ीडबैक"], "Terms of Service": [null, "सेवा की शर्तें"], "© 2026 ASTROJAK. All astrological consultations are strictly confidential and grounded in Vedic scriptures.": [null, "© 2026 ASTROJAK. सभी ज्योतिषीय परामर्श पूर्णतः गोपनीय हैं और वैदिक शास्त्रों पर आधारित हैं।"], "Get WhatsApp Call": [null, "व्हाट्सऐप कॉल पाएं"], "⭐ Feedback": [null, "⭐ फ़ीडबैक"], "Common problems aur unke jawab.": ["Common problems and their answers.", "आम समस्याएं और उनके समाधान।"], "Booking kaise karein?": ["How do I book?", "बुकिंग कैसे करें?"], "Plans section se plan chunein, payment karein, phir WhatsApp par apni birth details bhejein.": ["Choose a plan from the Plans section, pay, then send your birth details on WhatsApp.", "प्लान सेक्शन से प्लान चुनें, भुगतान करें, फिर व्हाट्सऐप पर जन्म जानकारी भेजें।"], "Payment ho gaya par confirmation nahi mila": ["I paid but got no confirmation", "भुगतान हो गया पर पुष्टि नहीं मिली"], "WhatsApp par payment ka screenshot bhejein. Agar paise kat gaye hain aur booking confirm nahi hui, to email par transaction details bhejein.": ["Send the payment screenshot on WhatsApp. If money was debited and the booking isn't confirmed, email us the transaction details.", "व्हाट्सऐप पर पेमेंट का स्क्रीनशॉट भेजें। अगर पैसे कट गए हैं और बुकिंग कन्फर्म नहीं हुई, तो ईमेल पर ट्रांज़ैक्शन की जानकारी भेजें।"], "Time reschedule karna hai": ["I need to reschedule", "समय बदलना है"], "Jitna jaldi ho sake WhatsApp ya email se batayein. Hum availability ke hisaab se naya time denge.": ["Tell us on WhatsApp or email as soon as possible. We'll offer a new time based on availability.", "जितनी जल्दी हो सके व्हाट्सऐप या ईमेल से बताएं। हम उपलब्धता के अनुसार नया समय देंगे।"], "Refund chahiye": ["I want a refund", "रिफंड चाहिए"], "Zaroorat ho to email karein. Niyam:": ["Email us if needed. Rules:", "ज़रूरत हो तो ईमेल करें। नियम:"], "Kundli ke liye kya details chahiye?": ["What details are needed for a Kundli?", "कुंडली के लिए कौन सी जानकारी चाहिए?"], "Date of Birth, Birth Time, Birth Place aur aapka sawal.": ["Date of birth, birth time, birth place and your question.", "जन्म तिथि, जन्म समय, जन्म स्थान और आपका प्रश्न।"], "Read FAQ": [null, "सामान्य प्रश्न पढ़ें"], "Hum aapki madad ke liye yahan hain.": ["We're here to help you.", "हम आपकी मदद के लिए यहाँ हैं।"], "WhatsApp: +91 78276 73637": [null, "व्हाट्सऐप: +91 78276 73637"], "Email: astrojak10@gmail.com": [null, "ईमेल: astrojak10@gmail.com"], "Instagram: @astrojakk": [null, "इंस्टाग्राम: @astrojakk"], "Rate Your Experience": [null, "अपना अनुभव रेट करें"], "Aapka feedback hamari team tak jaata hai.": ["Your feedback goes to our team.", "आपका फ़ीडबैक हमारी टीम तक जाता है।"], "Name": [null, "नाम"], "Phone Number (Optional)": [null, "फ़ोन नंबर (वैकल्पिक)"], "Send Feedback": [null, "फ़ीडबैक भेजें"], "Dhanyavaad! Aapka feedback mil gaya.": ["Thank you! We've received your feedback.", "धन्यवाद! आपका फ़ीडबैक मिल गया।"]};
+      var TR = {"Neeraj from Mumbai booked consultation just now": [null, "नीरज (मुंबई) ने अभी परामर्श बुक किया"], "Neha from Delhi consulted our Jyotish for Marriage Yog": [null, "नेहा (दिल्ली) ने विवाह योग के लिए ज्योतिषी से परामर्श लिया"], "Vikram from Pune got Career Kundli read": [null, "विक्रम (पुणे) ने करियर कुंडली देखी"], "Priya from Bengaluru unlocked Love Compatibility": [null, "प्रिया (बेंगलुरु) ने लव कंपैटिबिलिटी देखी"], "Amit from Jaipur consulted for Shani Sade Sati": [null, "अमित (जयपुर) ने शनि साढ़ेसाती पर परामर्श लिया"], "India's Platform for Astrology consultation": [null, "ज्योतिष परामर्श का भारतीय प्लेटफ़ॉर्म"], "Acharya Online": [null, "आचार्य ऑनलाइन"], "Chat on WhatsApp": [null, "व्हाट्सऐप पर चैट करें"], "✨ Book Consultation": [null, "✨ परामर्श बुक करें"], "Apne Bhavishya Ka": ["Get Accurate", "अपने भविष्य का"], "Satik Margdarshan": ["Guidance", "सटीक मार्गदर्शन"], "Payein": ["For Your Future", "पाएं"], "Janam Kundali, Vivah Yog, Love Life aur Career ki har uljhan ka shuddh Vedic upay. India ke certified Vedic Astrologers se seedhe WhatsApp par guidance lein.": ["Pure Vedic remedies for every worry in your Janam Kundali, marriage, love life and career. Get guidance directly on WhatsApp from India's certified Vedic astrologers.", "जन्म कुंडली, विवाह योग, लव लाइफ और करियर की हर उलझन का शुद्ध वैदिक उपाय। भारत के प्रमाणित वैदिक ज्योतिषियों से सीधे व्हाट्सऐप पर मार्गदर्शन लें।"], "Book on WhatsApp": [null, "व्हाट्सऐप पर बुक करें"], "Book online consultation": [null, "ऑनलाइन परामर्श बुक करें"], "View Plans": [null, "प्लान देखें"], "⚡ 30s Instant Connect": [null, "⚡ 30 सेकंड में कनेक्ट"], "🔒 100% Private": [null, "🔒 100% गोपनीय"], "🕉️ Genuine Remedies": [null, "🕉️ प्रामाणिक उपाय"], "Top Verified Astrologer": [null, "शीर्ष सत्यापित ज्योतिषी"], "Acharya Narender Ji": [null, "आचार्य नरेंद्र जी"], "Verified": [null, "सत्यापित"], "Kundli Vishleshan & Vivah Yog Specialist": ["Kundli Analysis & Marriage Yog Specialist", "कुंडली विश्लेषण और विवाह योग विशेषज्ञ"], "(15,200+ Reviews)": [null, "(15,200+ समीक्षाएं)"], "16+ Yrs Exp": ["16+ Years Exp", "16+ वर्ष अनुभव"], "Vedic Jyotish, Shani Sade Sati, Kundli dosh aur Vivah yog ke satik paramarsh ke liye Bharat ke jaane-maane Vedic vidwan.": ["A well-known Vedic scholar of India for accurate guidance on Vedic astrology, Shani Sade Sati, Kundli doshas and marriage yog.", "वैदिक ज्योतिष, शनि साढ़ेसाती, कुंडली दोष और विवाह योग के सटीक परामर्श के लिए भारत के जाने-माने वैदिक विद्वान।"], "Acharya Narender Ji Se WhatsApp Par Baat Karein": ["Chat with Acharya Narender Ji on WhatsApp", "आचार्य नरेंद्र जी से व्हाट्सऐप पर बात करें"], "Users Guided Across India": [null, "भारत भर में मार्गदर्शन पाए यूज़र्स"], "Daily Consultations": [null, "रोज़ाना परामर्श"], "Client Satisfaction Rate": [null, "ग्राहक संतुष्टि दर"], "Rating (15,200+ Reviews)": [null, "रेटिंग (15,200+ समीक्षाएं)"], "Hamari Pramukh Sevayein": ["Our Key Services", "हमारी प्रमुख सेवाएं"], "Popular Vedic Astrology Categories": [null, "लोकप्रिय वैदिक ज्योतिष श्रेणियां"], "Love & Vivah Yog": ["Love & Marriage Yog", "लव और विवाह योग"], "Shadi kab hogi? Kundli matching, Manglik Dosh aur Prem me aa rahi har badha ka satik Vedic nidaan.": ["When will marriage happen? Kundli matching, Manglik Dosh and accurate Vedic solutions for every obstacle in love.", "शादी कब होगी? कुंडली मिलान, मांगलिक दोष और प्रेम में आ रही हर बाधा का सटीक वैदिक निदान।"], "WhatsApp Par Poochhein →": ["Ask on WhatsApp →", "व्हाट्सऐप पर पूछें →"], "Career & Vyapar": ["Career & Business", "करियर और व्यापार"], "Nayi job, promotion ya business me labh kab hoga? Surya aur Guru ki dasha ka satik aakalan.": ["When will a new job, promotion or business profit come? Accurate analysis of Surya and Guru dasha.", "नई जॉब, प्रमोशन या बिज़नेस में लाभ कब होगा? सूर्य और गुरु की दशा का सटीक आकलन।"], "Parivarik Shanti": ["Family Peace", "पारिवारिक शांति"], "Ghar me klesh, vastu dosh aur grah shanti anushthan se ghar-parivar me sukh-samriddhi layein.": ["Bring happiness and prosperity home with remedies for family conflict, vastu dosh and graha shanti rituals.", "घर में क्लेश, वास्तु दोष और ग्रह शांति अनुष्ठान से घर-परिवार में सुख-समृद्धि लाएं।"], "Janam Patrika": ["Birth Chart", "जन्म पत्रिका"], "Vedic ganit dwara banayi gayi sampoorna Janam Patrika prapt karein.": ["Get your complete birth chart prepared with Vedic mathematics.", "वैदिक गणित से बनी संपूर्ण जन्म पत्रिका प्राप्त करें।"], "Consultation Plans": [null, "परामर्श प्लान"], "Apna Plan Chunein": ["Choose Your Plan", "अपना प्लान चुनें"], "Intro Offer": [null, "परिचय ऑफ़र"], "Most Popular": [null, "सबसे लोकप्रिय"], "🔒 Secured by Razorpay": [null, "🔒 Razorpay द्वारा सुरक्षित"], "15 Min Consultation": [null, "15 मिनट परामर्श"], "30 Min Consultation": [null, "30 मिनट परामर्श"], "45 Min Consultation": [null, "45 मिनट परामर्श"], "Intro offer for first-time clients": [null, "पहली बार आने वाले ग्राहकों के लिए"], "Detailed guidance on your key question": [null, "आपके मुख्य प्रश्न पर विस्तृत मार्गदर्शन"], "In-depth Kundli analysis & upay": [null, "गहन कुंडली विश्लेषण और उपाय"], "Choose Plan →": [null, "प्लान चुनें →"], "Plan par click karte hi secure Razorpay payment page khulega. Payment ke baad WhatsApp par apni Kundli details bhejein.": ["Clicking a plan opens a secure Razorpay payment page. After paying, send your Kundli details on WhatsApp.", "प्लान पर क्लिक करते ही सुरक्षित Razorpay पेमेंट पेज खुलेगा। भुगतान के बाद व्हाट्सऐप पर अपनी कुंडली की जानकारी भेजें।"], "Aasan Prakriya": ["Simple Process", "आसान प्रक्रिया"], "Sirf 3 Steps Mein Satik Paramarsh": ["Accurate Guidance in Just 3 Steps", "सिर्फ़ 3 स्टेप में सटीक परामर्श"], "Apni Janam Kundali Bhejein": ["Send Your Janam Kundali", "अपनी जन्म कुंडली भेजें"], "WhatsApp par apni Date of Birth, Time aur Place share karke apna sawal batayein.": ["Share your date, time and place of birth on WhatsApp and tell us your question.", "व्हाट्सऐप पर अपनी जन्म तिथि, समय और स्थान बताकर अपना प्रश्न बताएं।"], "Acharya Se Baat Karein": ["Talk to the Acharya", "आचार्य से बात करें"], "Hamare certified Acharya aapko call karke Dasha aur Grah Gochar ka vishleshan samjhayenge.": ["Our certified Acharya will call you and explain your Dasha and planetary transit analysis.", "हमारे प्रमाणित आचार्य आपको कॉल करके दशा और ग्रह गोचर का विश्लेषण समझाएंगे।"], "Satik Upay Payein": ["Get Accurate Remedies", "सटीक उपाय पाएं"], "Call ke baad WhatsApp par likhit summary aur saral Vedic upay turant prapt karein.": ["After the call, instantly receive a written summary and simple Vedic remedies on WhatsApp.", "कॉल के बाद व्हाट्सऐप पर लिखित सारांश और सरल वैदिक उपाय तुरंत पाएं।"], "Sache Anubhav": ["Real Experiences", "सच्चे अनुभव"], "Bharat Bhar Se Hamare Users Ki Raye": ["What Our Users Across India Say", "भारत भर से हमारे यूज़र्स की राय"], "Verified Consultation": [null, "सत्यापित परामर्श"], "Aksar Puche Jaane Wale Sawal": ["Frequently Asked Questions", "अक्सर पूछे जाने वाले प्रश्न"], "Consultation kaise hoti hai?": ["How does a consultation work?", "परामर्श कैसे होता है?"], "Apna plan chunein aur payment karein. Phir WhatsApp par Date of Birth, Time, Place aur apna sawal bhejein. Acharya aapko call par guidance denge aur baad mein WhatsApp par likhit summary milegi.": ["Choose your plan and pay. Then send your date, time and place of birth and your question on WhatsApp. The Acharya will guide you on a call, and you'll get a written summary on WhatsApp afterwards.", "अपना प्लान चुनें और भुगतान करें। फिर व्हाट्सऐप पर जन्म तिथि, समय, स्थान और अपना प्रश्न भेजें। आचार्य कॉल पर मार्गदर्शन देंगे और बाद में व्हाट्सऐप पर लिखित सारांश मिलेगा।"], "Mere liye kaunsa plan sahi hai?": ["Which plan is right for me?", "मेरे लिए कौन सा प्लान सही है?"], "15 min ek seedhe sawal ke liye, 30 min ek important sawal par detailed guidance ke liye, aur 45 min poori Kundli ke in-depth analysis aur upay ke liye hai.": ["15 min is for one quick question, 30 min for detailed guidance on one key question, and 45 min for an in-depth analysis of your full Kundli with remedies.", "15 मिनट एक सीधे प्रश्न के लिए, 30 मिनट एक अहम प्रश्न पर विस्तृत मार्गदर्शन के लिए, और 45 मिनट पूरी कुंडली के गहन विश्लेषण और उपायों के लिए है।"], "Kya payment safe hai?": ["Is the payment safe?", "क्या पेमेंट सुरक्षित है?"], "Payment Razorpay ke secure payment page par hota hai. Hum aapke card ya UPI ki details store nahi karte.": ["Payment is made on Razorpay's secure payment page. We do not store your card or UPI details.", "पेमेंट Razorpay के सुरक्षित पेज पर होता है। हम आपके कार्ड या UPI की जानकारी स्टोर नहीं करते।"], "Agar mujhe birth time nahi pata ho?": ["What if I don't know my birth time?", "अगर मुझे जन्म का समय नहीं पता हो?"], "Jitni jaankari ho utni bhejein, approximate time bhi. Acharya aapko batayenge ki us ke saath kya guidance di ja sakti hai.": ["Send whatever you know, even an approximate time. The Acharya will tell you what guidance is possible with it.", "जितनी जानकारी हो भेजें, अनुमानित समय भी। आचार्य बताएंगे कि उसके साथ क्या मार्गदर्शन दिया जा सकता है।"], "Kya meri jaankari private rahegi?": ["Will my information stay private?", "क्या मेरी जानकारी निजी रहेगी?"], "Haan. Aapki birth details aur baatcheet confidential rakhi jaati hain. Details ke liye:": ["Yes. Your birth details and conversations are kept confidential. For details, see:", "हाँ। आपकी जन्म जानकारी और बातचीत गोपनीय रखी जाती है। विवरण के लिए देखें:"], "Privacy Policy": [null, "प्राइवेसी पॉलिसी"], "Kya result ki guarantee hai?": ["Is any result guaranteed?", "क्या परिणाम की गारंटी है?"], "Jyotish Vedic parampara par based margdarshan hai, kisi specific result ki guarantee nahi li ja sakti. Refund ke liye:": ["Astrology is guidance based on Vedic tradition; no specific result can be guaranteed. For refunds, see:", "ज्योतिष वैदिक परंपरा पर आधारित मार्गदर्शन है; किसी विशेष परिणाम की गारंटी नहीं दी जा सकती। रिफंड के लिए देखें:"], "Refund Policy": [null, "रिफंड पॉलिसी"], "India's Trusted Vedic Astrology": [null, "भारत की विश्वसनीय वैदिक ज्योतिष सेवा"], "🛡️ 100% Confidential & Secure": [null, "🛡️ 100% गोपनीय और सुरक्षित"], "⚡ Certified Vedic Astrologer": [null, "⚡ प्रमाणित वैदिक ज्योतिषी"], "Follow @astrojakk on Instagram": [null, "इंस्टाग्राम पर @astrojakk को फ़ॉलो करें"], "FAQ": [null, "सामान्य प्रश्न"], "Help Center": [null, "सहायता केंद्र"], "Contact Us": [null, "संपर्क करें"], "Feedback": [null, "फ़ीडबैक"], "Terms of Service": [null, "सेवा की शर्तें"], "© 2026 ASTROJAK. All astrological consultations are strictly confidential and grounded in Vedic scriptures.": [null, "© 2026 ASTROJAK. सभी ज्योतिषीय परामर्श पूर्णतः गोपनीय हैं और वैदिक शास्त्रों पर आधारित हैं।"], "Get WhatsApp Call": [null, "व्हाट्सऐप कॉल पाएं"], "⭐ Feedback": [null, "⭐ फ़ीडबैक"], "Common problems aur unke jawab.": ["Common problems and their answers.", "आम समस्याएं और उनके समाधान।"], "Booking kaise karein?": ["How do I book?", "बुकिंग कैसे करें?"], "Plans section se plan chunein, payment karein, phir WhatsApp par apni birth details bhejein.": ["Choose a plan from the Plans section, pay, then send your birth details on WhatsApp.", "प्लान सेक्शन से प्लान चुनें, भुगतान करें, फिर व्हाट्सऐप पर जन्म जानकारी भेजें।"], "Payment ho gaya par confirmation nahi mila": ["I paid but got no confirmation", "भुगतान हो गया पर पुष्टि नहीं मिली"], "WhatsApp par payment ka screenshot bhejein. Agar paise kat gaye hain aur booking confirm nahi hui, to email par transaction details bhejein.": ["Send the payment screenshot on WhatsApp. If money was debited and the booking isn't confirmed, email us the transaction details.", "व्हाट्सऐप पर पेमेंट का स्क्रीनशॉट भेजें। अगर पैसे कट गए हैं और बुकिंग कन्फर्म नहीं हुई, तो ईमेल पर ट्रांज़ैक्शन की जानकारी भेजें।"], "Time reschedule karna hai": ["I need to reschedule", "समय बदलना है"], "Jitna jaldi ho sake WhatsApp ya email se batayein. Hum availability ke hisaab se naya time denge.": ["Tell us on WhatsApp or email as soon as possible. We'll offer a new time based on availability.", "जितनी जल्दी हो सके व्हाट्सऐप या ईमेल से बताएं। हम उपलब्धता के अनुसार नया समय देंगे।"], "Refund chahiye": ["I want a refund", "रिफंड चाहिए"], "Zaroorat ho to email karein. Niyam:": ["Email us if needed. Rules:", "ज़रूरत हो तो ईमेल करें। नियम:"], "Kundli ke liye kya details chahiye?": ["What details are needed for a Kundli?", "कुंडली के लिए कौन सी जानकारी चाहिए?"], "Date of Birth, Birth Time, Birth Place aur aapka sawal.": ["Date of birth, birth time, birth place and your question.", "जन्म तिथि, जन्म समय, जन्म स्थान और आपका प्रश्न।"], "Read FAQ": [null, "सामान्य प्रश्न पढ़ें"], "Hum aapki madad ke liye yahan hain.": ["We're here to help you.", "हम आपकी मदद के लिए यहाँ हैं।"], "WhatsApp: +91 78276 73637": [null, "व्हाट्सऐप: +91 78276 73637"], "Email: astrojak10@gmail.com": [null, "ईमेल: astrojak10@gmail.com"], "Instagram: @astrojakk": [null, "इंस्टाग्राम: @astrojakk"], "Rate Your Experience": [null, "अपना अनुभव रेट करें"], "Aapka feedback hamari team tak jaata hai.": ["Your feedback goes to our team.", "आपका फ़ीडबैक हमारी टीम तक जाता है।"], "Name": [null, "नाम"], "Phone Number (Optional)": [null, "फ़ोन नंबर (वैकल्पिक)"], "Send Feedback": [null, "फ़ीडबैक भेजें"], "Dhanyavaad! Aapka feedback mil gaya.": ["Thank you! We've received your feedback.", "धन्यवाद! आपका फ़ीडबैक मिल गया।"]};
       var nodes = [], norm = function (t) { return t.replace(/\s+/g, ' ').trim(); };
       var w = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, { acceptNode: function (n) {
         var p = n.parentElement;
@@ -1864,48 +1970,4 @@
       var btns = document.querySelectorAll('[data-lang]');
       function setLang(l) {
         nodes.forEach(function (x) {
-          var t = TR[x.k], v = l === 'en' ? t[0] : l === 'hi' ? t[1] : null;
-          x.n.nodeValue = v == null ? x.o : (/^\s/.test(x.o) ? ' ' : '') + v + (/\s$/.test(x.o) ? ' ' : '');
-        });
-        document.documentElement.lang = l === 'hi' ? 'hi' : 'en-IN';
-        btns.forEach(function (b) { var on = b.getAttribute('data-lang') === l; b.classList.toggle('on', on); b.setAttribute('aria-pressed', on); });
-        try { localStorage.setItem('lang', l); } catch (e) {}
-        if (window.gtag) gtag('event', 'language_change', { language: l });
-      }
-      btns.forEach(function (b) { b.addEventListener('click', function () { setLang(b.getAttribute('data-lang')); }); });
-      var saved = 'en'; try { saved = localStorage.getItem('lang') || 'en'; } catch (e) {}
-      if (saved !== 'hing') setLang(saved);
-
-      // header shadow on scroll
-      var hd = document.querySelector('.site-header');
-      window.addEventListener('scroll', function () { hd.classList.toggle('scrolled', window.scrollY > 8); }, { passive: true });
-
-      // scroll reveal + stat count-up
-      function count(el) {
-        var m = el.textContent.match(/^([\d.]+)(.*)$/); if (!m) return;
-        var end = parseFloat(m[1]), dec = (m[1].split('.')[1] || '').length, t0 = null, full = el.textContent;
-        (function tick(t) {
-          if (t0 === null) t0 = t; var p = Math.min((t - t0) / 1300, 1), e = 1 - Math.pow(1 - p, 3);
-          el.textContent = p < 1 ? (end * e).toFixed(dec) + m[2] : full;
-          if (p < 1) requestAnimationFrame(tick);
-        })(performance.now());
-      }
-      if ('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
-        var io = new IntersectionObserver(function (es) {
-          es.forEach(function (e) {
-            if (!e.isIntersecting) return;
-            var el = e.target; io.unobserve(el); el.classList.add('in');
-            if (el.classList.contains('stat-item')) count(el.querySelector('.stat-number'));
-            setTimeout(function () { el.classList.remove('rv', 'in'); }, 1200); // hand hover transitions back to the original styles
-          });
-        }, { threshold: 0.15 });
-        document.querySelectorAll('.section-title-wrap,.stat-item,.service-card,.plan-card,.step-card,.review-card,.faq-list details').forEach(function (el) {
-          el.style.setProperty('--d', Math.min([].indexOf.call(el.parentNode.children, el), 5) * 0.08 + 's');
-          el.classList.add('rv'); io.observe(el);
-        });
-      }
-    })();
-  </script>
-
-</body>
-</html>
+          var t = TR[x.k], v = l === 'en' ? t[0] : l === 'hi' ? t[1] 
