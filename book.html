@@ -105,9 +105,9 @@ footer a{margin:0 6px}
     <button class="pay" id="pay" type="button">Pay Securely</button>
     <!-- Same Razorpay buttons as the home page plans; the selected plan's one sits invisibly over Pay Securely. -->
     <div class="rzhost">
-      <form data-plan="15"><script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_Tjk2VfkHdzHD0z" async></script></form>
-      <form data-plan="30" class="on"><script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_Tjk8wYUcI8zh08" async></script></form>
-      <form data-plan="45"><script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_TjkDoSp6poJXeS" async></script></form>
+      <form data-plan="15" target="_blank"><script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_Tjk2VfkHdzHD0z" async></script></form>
+      <form data-plan="30" class="on" target="_blank"><script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_Tjk8wYUcI8zh08" async></script></form>
+      <form data-plan="45" target="_blank"><script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_TjkDoSp6poJXeS" async></script></form>
     </div>
   </div>
   <p class="fine"><span id="fine">₹499 for 30 minutes</span> · secure Razorpay checkout · UPI, cards and netbanking · after payment, share your birth details on WhatsApp</p>
@@ -162,7 +162,7 @@ show();
 $('pay').addEventListener('click',function(){
  var k=$('plan').value;
  if(window.gtag)gtag('event','begin_checkout',{plan:k+' min'});
- location.href='./?plan='+k+'#plans';
+ window.open('./?plan='+k+'#plans','_blank','noopener');
 });
 function opt(id,v,t){var o=document.createElement('option');o.value=v;o.textContent=t;$(id).appendChild(o)}
 try{
