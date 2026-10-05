@@ -36,10 +36,7 @@ input:focus,select:focus{outline:none;border-color:var(--saffron)}
 .sum b{color:var(--dark);font-size:24px;font-weight:800}
 .paywrap{position:relative;margin-top:14px;border-radius:14px}
 .pay{display:block;width:100%;border:0;border-radius:14px;padding:15px;font:inherit;font-weight:800;font-size:15px;letter-spacing:1.5px;text-transform:uppercase;color:#3D2600;background:var(--gold);box-shadow:0 6px 18px rgba(255,111,0,.3);cursor:pointer}
-.rzhost{position:absolute;inset:0;overflow:hidden;border-radius:14px}
-.rzhost form{position:absolute;inset:0;margin:0;opacity:0;pointer-events:none}
-.rzhost form.on{pointer-events:auto;z-index:3}
-.rzhost form>*,.rzhost form button{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;margin:0!important;cursor:pointer}
+.rzhost{position:absolute;left:-9999px;top:0;width:1px;height:1px;overflow:hidden;opacity:0;pointer-events:none}
 .fine{text-align:center;font-size:13px;color:var(--muted);margin-top:12px}
 .intro{text-align:center;margin:22px 0 10px;font-size:15.5px}
 .wa{display:flex;align-items:center;justify-content:center;margin-top:16px;background:var(--wa);color:#fff;text-decoration:none;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;font-size:14px;padding:14px;border-radius:14px}
@@ -158,11 +155,15 @@ function show(){
 $('plan').addEventListener('change',show);
 try{var q=new URLSearchParams(location.search).get('plan');if(P[q])$('plan').value=q}catch(e){}
 show();
-// Fallback: only reached if Razorpay's button isn't covering Pay Securely (not loaded). Sends to the home page plan buttons.
+// Pay Securely: click the Razorpay button of the selected plan (opens in a new tab); if it hasn't loaded, open the Razorpay page directly.
+var IDS={15:'pl_Tjk2VfkHdzHD0z',30:'pl_Tjk8wYUcI8zh08',45:'pl_TjkDoSp6poJXeS'};
 $('pay').addEventListener('click',function(){
  var k=$('plan').value;
  if(window.gtag)gtag('event','begin_checkout',{plan:k+' min'});
- window.open('./?plan='+k+'#plans','_blank','noopener');
+ var f=document.querySelector('.rzhost form[data-plan="'+k+'"]');
+ var b=f&&f.querySelector('button,input[type=submit]');
+ if(b){b.click();return}
+ window.open('https://pages.razorpay.com/'+IDS[k],'_blank','noopener');
 });
 function opt(id,v,t){var o=document.createElement('option');o.value=v;o.textContent=t;$(id).appendChild(o)}
 try{
