@@ -199,7 +199,21 @@ $('plan').addEventListener('change',show);
 try{var q=new URLSearchParams(location.search).get('plan');if(P[q])$('plan').value=q}catch(e){}
 show();
 // Razorpay's own button for the selected plan is shown (same as the home page); just track the click.
-document.querySelector('.rzhost').addEventListener('click',function(){if(window.gtag)gtag('event','begin_checkout',{plan:$('plan').value})});
+// Send the details to Formspree when the customer clicks the Razorpay button (or the WhatsApp button). No extra submit button.
+var FORMSPREE='https://formspree.io/f/moejvjbn',lastSig='',lastAt=0;
+function send(src){try{
+ var v=function(i){return ($(i).value||'').trim()},k=$('plan').value,d=P[k];
+ var t=[].map.call(document.querySelectorAll('.chip input:checked'),function(x){return x.value});
+ var o={_subject:'ASTROJAK booking: '+d.n+' ('+d.p+')',source:src,plan:d.n,amount:d.p,topics:t.join(', '),other_topic:$('otherChk').checked?v('otherTxt'):'',name:v('name'),phone:v('phone'),email:v('email'),
+  date_of_birth:(v('yy')&&v('mm')&&v('dd'))?(v('dd')+'/'+v('mm')+'/'+v('yy')):'',birth_time:(v('hh')&&v('mi')&&v('ap'))?(v('hh')+':'+v('mi')+' '+v('ap')):'',birth_place:v('place'),page:location.href};
+ if(!(o.name||o.phone||o.email||o.date_of_birth||o.birth_time||o.birth_place||o.topics))return;
+ var sig=JSON.stringify(o),now=Date.now();
+ if(sig===lastSig&&now-lastAt<60000)return;
+ lastSig=sig;lastAt=now;
+ fetch(FORMSPREE,{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(o),keepalive:true}).catch(function(){});
+}catch(e){}}
+document.querySelector('.rzhost').addEventListener('click',function(){send('Razorpay button');if(window.gtag)gtag('event','begin_checkout',{plan:$('plan').value})});
+$('wa').addEventListener('click',function(){send('WhatsApp button')});
 function opt(id,v,t){var o=document.createElement('option');o.value=v;o.textContent=t;$(id).appendChild(o)}
 try{
 for(var y=new Date().getFullYear();y>=1920;y--)opt('yy',y,y);
