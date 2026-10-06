@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Book Consultation | Vedic Astrology with Acharya Narender Ji | ASTROJAK</title>
-<meta name="description" content="Book a Vedic astrology consultation with Acharya Narender Ji. Choose 15, 30 or 45 minutes, pay securely with Razorpay and get guidance by call and WhatsApp.">
+<meta name="description" content="Book a Vedic astrology consultation with Acharya Narender Ji. Choose Kundali Analysis, Detailed Kundali Analysis or Marriage Matchmaking, pay securely with Razorpay and get guidance by call and WhatsApp.">
 <link rel="canonical" href="https://astrojak.com/book.html">
 <link rel="preconnect" href="https://checkout.razorpay.com">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -61,6 +61,41 @@ tr:last-child td{border-bottom:0}
 .faq p{margin-top:10px;color:var(--muted);font-size:15px}
 footer{margin-top:44px;padding:24px 16px;text-align:center;font-size:13px;color:var(--muted);border-top:1px solid var(--border);background:#fff}
 footer a{margin:0 6px}
+
+/* ---- form UI ---- */
+.card{padding:24px 20px;border-radius:24px;box-shadow:0 14px 40px rgba(248,183,0,.18),0 2px 6px rgba(0,0,0,.04);position:relative;overflow:hidden}
+.card::before{content:"";position:absolute;left:0;right:0;top:0;height:5px;background:var(--gold)}
+label{font-size:12px;font-weight:700;letter-spacing:.6px;text-transform:uppercase;color:#7A5A12;margin:18px 0 7px}
+input,select{background:#FFFDF7;border:1.5px solid var(--border);border-radius:14px;padding:14px 14px;min-height:50px;transition:border-color .2s,box-shadow .2s,background .2s;box-shadow:inset 0 1px 2px rgba(0,0,0,.03)}
+input::placeholder{color:#B5A98C}
+input:hover,select:hover{border-color:var(--accent);background:#fff}
+input:focus,select:focus{outline:none;border-color:var(--saffron);background:#fff;box-shadow:0 0 0 4px rgba(255,111,0,.14)}
+select{-webkit-appearance:none;appearance:none;cursor:pointer;padding-right:34px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1.5l5 5 5-5' fill='none' stroke='%23E65100' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 13px center}
+#plan{font-weight:700;color:var(--dark);background-color:#FFF6DC;border-color:var(--yellow)}
+.row{gap:10px}.row select{padding-left:12px;padding-right:26px;background-position:right 9px center}
+.sum{border-radius:16px;background:linear-gradient(135deg,#FFF6DC,#FFEFC2)}
+.paywrap{margin-top:16px}
+
+/* ---- what is on your mind ---- */
+.mind{margin-top:22px;padding:16px 14px 12px;background:#FFFBEE;border:1.5px dashed var(--accent);border-radius:18px}
+.mind .q{font-size:17px;font-weight:800;color:var(--ink);text-align:center}
+.mind .hint{text-align:center;font-size:12.5px;color:var(--muted);margin:2px 0 12px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;justify-content:center}
+.chip{display:block;margin:0;padding:0;font-size:13px;letter-spacing:0;text-transform:none;font-weight:600;color:var(--ink);position:relative;cursor:pointer}
+.chip input{position:absolute;opacity:0;width:1px;height:1px;min-height:0;padding:0;border:0;box-shadow:none}
+.chip span{display:inline-flex;align-items:center;gap:6px;padding:8px 13px;background:#fff;border:1.5px solid var(--border);border-radius:999px;line-height:1.2;transition:all .18s;user-select:none}
+.chip span i{font-style:normal;font-size:15px}
+.chip:hover span{border-color:var(--yellow);transform:translateY(-1px)}
+.chip input:checked+span{background:var(--gold);border-color:var(--saffron);color:#3D2600;font-weight:700;box-shadow:0 4px 12px rgba(255,111,0,.25)}
+.chip input:focus-visible+span{outline:3px solid rgba(255,111,0,.35);outline-offset:2px}
+.mind .count{text-align:center;font-size:12.5px;font-weight:700;color:var(--dark);min-height:18px;margin-top:10px}
+
+.chips.collapsed .chip.more:not(:has(input:checked)){display:none}
+.chip.other{order:99}
+.other-txt{margin-top:12px}.other-txt[hidden]{display:none}
+.more-btn{display:block;margin:12px auto 0;background:none;border:1.5px solid var(--accent);border-radius:999px;padding:7px 16px;font:inherit;font-size:13px;font-weight:700;color:var(--dark);cursor:pointer;transition:background .2s}
+.more-btn:hover{background:#FFF1C9}
+#savedNote a{font-weight:700}
 </style>
 </head>
 <body>
@@ -72,68 +107,76 @@ footer a{margin:0 6px}
 <h1>Book Consultation with Acharya Narender Ji</h1>
 
 <div class="card">
-  <label for="plan">Choose consultation option</label>
+  <label for="plan">Choose your analysis</label>
   <select id="plan">
-    <option value="15">15 Minutes — ₹49 (Intro Offer)</option>
-    <option value="30" selected>30 Minutes — ₹499</option>
-    <option value="45">45 Minutes — ₹999</option>
+    <option value="kundali">Kundali Analysis — ₹999</option>
+    <option value="detailed-kundali" selected>Detailed Kundali Analysis — ₹1499</option>
+    <option value="matchmaking">Marriage Matchmaking Analysis — ₹1499</option>
   </select>
 
-  <label for="name">Your name (optional)</label>
+  <div class="mind">
+    <div class="q" id="mindq">What is on your mind?</div>
+    <p class="hint">Select all that apply</p>
+    <div class="chips collapsed" id="chips" role="group" aria-labelledby="mindq"><label class="chip"><input type="checkbox" name="topic" value="Business"><span><i>💼</i>Business</span></label><label class="chip"><input type="checkbox" name="topic" value="Career"><span><i>🚀</i>Career</span></label><label class="chip"><input type="checkbox" name="topic" value="Finance"><span><i>💰</i>Finance</span></label><label class="chip"><input type="checkbox" name="topic" value="Marriage"><span><i>💍</i>Marriage</span></label><label class="chip"><input type="checkbox" name="topic" value="Relationships"><span><i>❤️</i>Relationships</span></label><label class="chip"><input type="checkbox" name="topic" value="Health"><span><i>🩺</i>Health</span></label><label class="chip more"><input type="checkbox" name="topic" value="Education"><span><i>🎓</i>Education</span></label><label class="chip more"><input type="checkbox" name="topic" value="Children"><span><i>👶</i>Children</span></label><label class="chip more"><input type="checkbox" name="topic" value="Family"><span><i>👨‍👩‍👧</i>Family</span></label><label class="chip more"><input type="checkbox" name="topic" value="Property"><span><i>🏠</i>Property</span></label><label class="chip more"><input type="checkbox" name="topic" value="Legal Matters"><span><i>⚖️</i>Legal Matters</span></label><label class="chip more"><input type="checkbox" name="topic" value="Foreign Opportunities"><span><i>✈️</i>Foreign Opportunities</span></label><label class="chip more"><input type="checkbox" name="topic" value="Relocation"><span><i>📦</i>Relocation</span></label><label class="chip more"><input type="checkbox" name="topic" value="Personal Growth"><span><i>🌱</i>Personal Growth</span></label><label class="chip more"><input type="checkbox" name="topic" value="Life Purpose"><span><i>🧭</i>Life Purpose</span></label><label class="chip more"><input type="checkbox" name="topic" value="Spiritual Growth"><span><i>🕉️</i>Spiritual Growth</span></label><label class="chip more"><input type="checkbox" name="topic" value="Major Decisions"><span><i>🔀</i>Major Decisions</span></label><label class="chip more"><input type="checkbox" name="topic" value="Timing"><span><i>⏳</i>Timing</span></label><label class="chip more"><input type="checkbox" name="topic" value="Obstacles &amp; Delays"><span><i>🚧</i>Obstacles &amp; Delays</span></label><label class="chip more"><input type="checkbox" name="topic" value="Reputation &amp; Status"><span><i>🏅</i>Reputation &amp; Status</span></label><label class="chip more"><input type="checkbox" name="topic" value="Partnership"><span><i>🤝</i>Partnership</span></label><label class="chip more"><input type="checkbox" name="topic" value="Investments"><span><i>📈</i>Investments</span></label><label class="chip more"><input type="checkbox" name="topic" value="Success &amp; Recognition"><span><i>🏆</i>Success &amp; Recognition</span></label><label class="chip more"><input type="checkbox" name="topic" value="Life Transitions"><span><i>🦋</i>Life Transitions</span></label><label class="chip other"><input type="checkbox" name="topic" value="Other" id="otherChk"><span><i>✍️</i>Other</span></label></div>
+    <input type="text" id="otherTxt" class="other-txt" placeholder="Type what is on your mind" maxlength="120" hidden>
+    <button type="button" class="more-btn" id="moreBtn" aria-expanded="false" aria-controls="chips">Show more topics ▾</button>
+    <p class="count" id="cnt" aria-live="polite"></p>
+  </div>
+
+  <label for="name">Your name</label>
   <input id="name" type="text" autocomplete="name">
-  <label for="phone">Phone / WhatsApp number (optional)</label>
+  <label for="phone">Phone / WhatsApp number</label>
   <input id="phone" type="tel" autocomplete="tel">
-  <label for="email">Email address (optional)</label>
+  <label for="email">Email address</label>
   <input id="email" type="email" autocomplete="email">
 
-  <label>Date of birth (optional)</label>
+  <label>Date of birth</label>
   <div class="row"><select id="yy" aria-label="Year"><option value="">Year</option></select><select id="mm" aria-label="Month"><option value="">Month</option></select><select id="dd" aria-label="Day"><option value="">Day</option></select></div>
 
-  <label>Exact birth time (optional)</label>
+  <label>Exact birth time</label>
   <div class="row"><select id="hh" aria-label="Hour"><option value="">HH</option></select><span class="sep">:</span><select id="mi" aria-label="Minute"><option value="">MM</option></select><select id="ap" aria-label="AM or PM"><option value="">--</option><option>AM</option><option>PM</option></select></div>
 
-  <label for="place">Birth place (optional)</label>
+  <label for="place">Birth place</label>
   <input id="place" type="text" placeholder="City, State, Country">
 
   <div class="sum">
-    <div class="l"><span>Selected:</span><strong id="sel">30 Minutes Consultation</strong></div>
-    <div class="l"><span>Amount payable:</span><b id="amt">₹499</b></div>
+    <div class="l"><span>Selected:</span><strong id="sel">Detailed Kundali Analysis</strong></div>
+    <div class="l"><span>Amount payable:</span><b id="amt">₹1499</b></div>
   </div>
 
   <div class="paywrap">
     <div class="rzhost">
-      <form data-plan="15" target="_blank"><script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_Tjk2VfkHdzHD0z" async></script></form>
-      <form data-plan="30" class="on" target="_blank"><script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_Tjk8wYUcI8zh08" async></script></form>
-      <form data-plan="45" target="_blank"><script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_TjkDoSp6poJXeS" async></script></form>
+      <form data-plan="kundali" target="_blank"><script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_Tjk2VfkHdzHD0z" async></script></form>
+      <form data-plan="detailed-kundali" class="on" target="_blank"><script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_Tjk8wYUcI8zh08" async></script></form>
+      <form data-plan="matchmaking" target="_blank"><script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_TjkDoSp6poJXeS" async></script></form>
     </div>
   </div>
-  <p class="fine"><span id="fine">₹499 for 30 minutes</span> · secure Razorpay checkout · UPI, cards and netbanking · after payment, share your birth details on WhatsApp</p>
+  <p class="fine" id="savedNote" hidden>Your details are saved on this device for next time. <a href="#" id="clr">Clear</a></p>
+  <p class="fine"><span id="fine">₹1499 for Detailed Kundali Analysis</span> · secure Razorpay checkout · UPI, cards and netbanking · after payment, share your birth details on WhatsApp</p>
 </div>
 
-<p class="intro">A <b>consultation with Acharya Narender Ji</b> is a personal reading of your Kundli by phone and WhatsApp. Pick the duration that suits your question, pay once, and get honest Vedic guidance with a clear upay.</p>
-<a class="wa" href="https://wa.me/917827673637?text=Hi!%20I%20want%20to%20book%20astrology%20consultation." target="_blank" rel="noopener noreferrer">Book on WhatsApp</a>
+<p class="intro">A <b>consultation with Acharya Narender Ji</b> is a <b>1:1 consultation on audio call with our astrologer</b>, a personal reading of your Kundli. Pick the analysis that suits your need, pay once, and get honest Vedic guidance with a clear upay.</p>
+<a class="wa" id="wa" href="https://wa.me/917827673637?text=Hi!%20I%20want%20to%20book%20astrology%20consultation." target="_blank" rel="noopener noreferrer">Book on WhatsApp</a>
 
 <h2>What You Get</h2>
-<p class="sub">Compare the three consultation plans</p>
+<p class="sub">Compare the three plans</p>
 <div class="tbl"><table>
-<thead><tr><th>What you get</th><th>15 Min</th><th class="f">30 Min</th><th>45 Min</th></tr></thead>
+<thead><tr><th>What you get</th><th>Kundali</th><th class="f">Detailed Kundali</th><th>Matchmaking</th></tr></thead>
 <tbody>
-<tr><td>Price</td><td>₹49</td><td class="f">₹499</td><td>₹999</td></tr>
-<tr><td>Live call / WhatsApp with Acharya</td><td class="y">✔</td><td class="y f">✔</td><td class="y">✔</td></tr>
-<tr><td>One direct question answered</td><td class="y">✔</td><td class="y f">✔</td><td class="y">✔</td></tr>
-<tr><td>Detailed guidance on key question</td><td class="n">—</td><td class="y f">✔</td><td class="y">✔</td></tr>
+<tr><td>Price</td><td>₹999</td><td class="f">₹1499</td><td>₹1499</td></tr>
+<tr><td>1:1 audio call with our astrologer</td><td class="y">✔</td><td class="y f">✔</td><td class="y">✔</td></tr>
+<tr><td>Birth chart (Kundli) reading</td><td class="y">✔</td><td class="y f">✔</td><td class="y">✔</td></tr>
 <tr><td>Dasha &amp; timing guidance</td><td class="n">—</td><td class="y f">✔</td><td class="y">✔</td></tr>
-<tr><td>Written summary on WhatsApp</td><td class="n">—</td><td class="y f">✔</td><td class="y">✔</td></tr>
-<tr><td>In-depth Kundli analysis</td><td class="n">—</td><td class="n f">—</td><td class="y">✔</td></tr>
-<tr><td>Personal upay (remedies)</td><td class="n">—</td><td class="n f">—</td><td class="y">✔</td></tr>
-<tr><td>Best for</td><td>Quick doubt</td><td class="f">One key decision</td><td>Full life review</td></tr>
+<tr><td>Personal upay (remedies)</td><td class="n">—</td><td class="y f">✔</td><td class="y">✔</td></tr>
+<tr><td>Two Kundlis compared (Guna Milan, Manglik)</td><td class="n">—</td><td class="n f">—</td><td class="y">✔</td></tr>
+<tr><td>Best for</td><td>Overview of your chart</td><td class="f">Full life review</td><td>Marriage decision</td></tr>
 </tbody></table></div>
 <p class="fine">Flat fee per plan. No hidden charges, no upsells.</p>
 
 <h2>Common Questions</h2>
 <div class="faq" style="margin-top:16px">
 <details><summary>How does the consultation work?</summary><p>Choose your plan and pay. Then send your date of birth, time, place and question on WhatsApp. Acharya Narender Ji guides you on call, and you receive a written summary on WhatsApp afterwards.</p></details>
-<details><summary>Which plan is right for me?</summary><p>15 minutes suits one direct question. 30 minutes gives detailed guidance on one important question. 45 minutes covers your full Kundli in depth, along with upay.</p></details>
+<details><summary>Which plan is right for me?</summary><p>Kundali Analysis (₹999) gives a clear reading of your birth chart. Detailed Kundali Analysis (₹1499) adds deeper Dasha, timing and upay. Marriage Matchmaking Analysis (₹1499) compares two Kundlis for marriage compatibility.</p></details>
 <details><summary>Is payment safe?</summary><p>Yes. Payment happens on Razorpay's secure page. We never store your card or UPI details.</p></details>
 <details><summary>What if I don't know my birth time?</summary><p>Share whatever you know, even an approximate time. Acharya will explain what guidance is possible with it.</p></details>
 <details><summary>Do I have to fill the form before paying?</summary><p>No, every field is optional. You can pay first and send your details on WhatsApp.</p></details>
@@ -145,18 +188,18 @@ footer a{margin:0 6px}
 
 <script>
 (function(){
-var P={15:{n:'15 Minutes Consultation',p:'₹49'},30:{n:'30 Minutes Consultation',p:'₹499'},45:{n:'45 Minutes Consultation',p:'₹999'}};
+var P={'kundali':{n:'Kundali Analysis',p:'₹999'},'detailed-kundali':{n:'Detailed Kundali Analysis',p:'₹1499'},'matchmaking':{n:'Marriage Matchmaking Analysis',p:'₹1499'}};
 var $=function(i){return document.getElementById(i)};
 function show(){
  var k=$('plan').value,d=P[k];
- $('sel').textContent=d.n;$('amt').textContent=d.p;$('fine').textContent=d.p+' for '+k+' minutes';
+ $('sel').textContent=d.n;$('amt').textContent=d.p;$('fine').textContent=d.p+' for '+d.n;
  [].forEach.call(document.querySelectorAll('.rzhost form'),function(f){f.classList.toggle('on',f.getAttribute('data-plan')===k)});
 }
 $('plan').addEventListener('change',show);
 try{var q=new URLSearchParams(location.search).get('plan');if(P[q])$('plan').value=q}catch(e){}
 show();
 // Razorpay's own button for the selected plan is shown (same as the home page); just track the click.
-document.querySelector('.rzhost').addEventListener('click',function(){if(window.gtag)gtag('event','begin_checkout',{plan:$('plan').value+' min'})});
+document.querySelector('.rzhost').addEventListener('click',function(){if(window.gtag)gtag('event','begin_checkout',{plan:$('plan').value})});
 function opt(id,v,t){var o=document.createElement('option');o.value=v;o.textContent=t;$(id).appendChild(o)}
 try{
 for(var y=new Date().getFullYear();y>=1920;y--)opt('yy',y,y);
@@ -165,6 +208,47 @@ for(var d=1;d<=31;d++)opt('dd',d,d);
 for(var h=1;h<=12;h++)opt('hh',h,h);
 for(var m=0;m<60;m++)opt('mi',m,(m<10?'0':'')+m);
 }catch(e){}
+
+// "What is on your mind" counter + WhatsApp message built from the form
+function msg(){
+ var v=function(i){return ($(i).value||'').trim()},L=[],k=$('plan').value,d=P[k];
+ L.push('Hi! I want to book '+d.n+' ('+d.p+').');
+ var t=[].map.call(document.querySelectorAll('.chip input:checked'),function(x){return x.value==='Other'?('Other'+(v('otherTxt')?': '+v('otherTxt'):'')):x.value});
+ if(t.length)L.push('On my mind: '+t.join(', '));
+ if(v('name'))L.push('Name: '+v('name'));
+ if(v('yy')&&v('mm')&&v('dd'))L.push('Date of birth: '+v('dd')+'/'+v('mm')+'/'+v('yy'));
+ if(v('hh')&&v('mi')&&v('ap'))L.push('Birth time: '+v('hh')+':'+v('mi')+' '+v('ap'));
+ if(v('place'))L.push('Birth place: '+v('place'));
+ $('wa').href='https://wa.me/917827673637?text='+encodeURIComponent(L.join('\n'));
+ var n=t.length;$('cnt').textContent=n?n+' selected':'';
+ $('otherTxt').hidden=!$('otherChk').checked;
+}
+// expand / collapse topics
+$('moreBtn').addEventListener('click',function(){var c=$('chips').classList.toggle('collapsed');this.setAttribute('aria-expanded',String(!c));this.textContent=c?'Show more topics ▾':'Show fewer topics ▴'});
+// keep form data in a browser cookie (1 year)
+var CK='astrojak_form',IDS=['plan','name','phone','email','yy','mm','dd','hh','mi','ap','place','otherTxt'];
+function ckGet(){try{var m=document.cookie.match(new RegExp('(?:^|; )'+CK+'=([^;]*)'));return m?JSON.parse(decodeURIComponent(m[1])):null}catch(e){return null}}
+function save(){try{
+ var o={f:{},t:[].map.call(document.querySelectorAll('.chip input:checked'),function(x){return x.value})};
+ IDS.forEach(function(i){o.f[i]=$(i).value});
+ document.cookie=CK+'='+encodeURIComponent(JSON.stringify(o))+'; max-age=31536000; path=/; SameSite=Lax'+(location.protocol==='https:'?'; Secure':'');
+ $('savedNote').hidden=false}catch(e){}}
+var sv=ckGet();
+if(sv){try{
+ IDS.forEach(function(i){if(sv.f&&sv.f[i]!=null&&!(i==='plan'&&new URLSearchParams(location.search).get('plan')))$(i).value=sv.f[i]});
+ [].forEach.call(document.querySelectorAll('.chip input'),function(x){x.checked=(sv.t||[]).indexOf(x.value)>-1});
+ if(!P[$('plan').value])$('plan').value='detailed-kundali';
+ $('savedNote').hidden=false;show();
+}catch(e){}}
+$('clr').addEventListener('click',function(e){e.preventDefault();
+ document.cookie=CK+'=; max-age=0; path=/';
+ IDS.forEach(function(i){if(i!=='plan')$(i).value=''});
+ [].forEach.call(document.querySelectorAll('.chip input'),function(x){x.checked=false});
+ $('savedNote').hidden=true;msg()});
+var card=document.querySelector('.card');
+card.addEventListener('input',function(){msg();save()});
+card.addEventListener('change',function(){msg();save()});
+msg();
 })();
 </script>
 </body>
