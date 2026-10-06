@@ -206,13 +206,17 @@ function send(src){try{
  var t=[].map.call(document.querySelectorAll('.chip input:checked'),function(x){return x.value});
  var o={_subject:'ASTROJAK booking: '+d.n+' ('+d.p+')',source:src,plan:d.n,amount:d.p,topics:t.join(', '),other_topic:$('otherChk').checked?v('otherTxt'):'',name:v('name'),phone:v('phone'),email:v('email'),
   date_of_birth:(v('yy')&&v('mm')&&v('dd'))?(v('dd')+'/'+v('mm')+'/'+v('yy')):'',birth_time:(v('hh')&&v('mi')&&v('ap'))?(v('hh')+':'+v('mi')+' '+v('ap')):'',birth_place:v('place'),page:location.href};
- if(!(o.name||o.phone||o.email||o.date_of_birth||o.birth_time||o.birth_place||o.topics))return;
  var sig=JSON.stringify(o),now=Date.now();
- if(sig===lastSig&&now-lastAt<60000)return;
+ if(sig===lastSig&&now-lastAt<10000)return;
  lastSig=sig;lastAt=now;
- fetch(FORMSPREE,{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(o),keepalive:true}).catch(function(){});
-}catch(e){}}
-document.querySelector('.rzhost').addEventListener('click',function(){send('Razorpay button');if(window.gtag)gtag('event','begin_checkout',{plan:$('plan').value})});
+ // FormData = a "simple" request (no CORS preflight), the format Formspree handles best
+ var fd=new FormData();Object.keys(o).forEach(function(n){if(o[n]!=='')fd.append(n,o[n])});
+ fetch(FORMSPREE,{method:'POST',headers:{'Accept':'application/json'},body:fd,keepalive:true})
+  .then(function(r){if(!r.ok){r.text().then(function(x){console.warn('Formspree rejected the submission',r.status,x)})}})
+  .catch(function(e){console.warn('Formspree fetch failed, trying beacon',e);try{navigator.sendBeacon(FORMSPREE,fd)}catch(_){}});
+}catch(e){console.warn('send() error',e)}}
+document.querySelector('.rzhost').addEventListener('click',function(){send('Razorpay button');if(window.gtag)gtag('event','begin_checkout',{plan:$('plan').value})},true);
+document.querySelector('.rzhost').addEventListener('submit',function(){send('Razorpay button')},true);
 $('wa').addEventListener('click',function(){send('WhatsApp button')});
 function opt(id,v,t){var o=document.createElement('option');o.value=v;o.textContent=t;$(id).appendChild(o)}
 try{
