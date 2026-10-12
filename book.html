@@ -6,6 +6,16 @@
 <title>Book Consultation | Vedic Astrology with Acharya Narender Ji | ASTROJAK</title>
 <meta name="description" content="Book a Vedic astrology consultation with Acharya Narender Ji. Choose Kundali Analysis, Detailed Kundali Analysis or Marriage Matchmaking, pay securely with Razorpay and get guidance by call and WhatsApp.">
 <link rel="canonical" href="https://astrojak.com/book.html">
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-P95LFD42');</script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-46W6R6SFS6"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-46W6R6SFS6');
+</script>
 <link rel="preconnect" href="https://checkout.razorpay.com">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -267,6 +277,35 @@ var card=document.querySelector('.card');
 card.addEventListener('input',function(){msg();save()});
 card.addEventListener('change',function(){msg();save()});
 msg();
+})();
+</script>
+<script>
+/* ASTROJAK visitor log -> your own Google Sheet (free).
+   Paste your Apps Script Web App URL into ENDPOINT. While it is empty this does nothing. */
+(function () {
+  var ENDPOINT = '';
+  if (!ENDPOINT) return;
+  var sid; try { sid = sessionStorage.getItem('sid') || (sessionStorage.setItem('sid', Math.random().toString(36).slice(2, 10)), sessionStorage.getItem('sid')); } catch (e) { sid = 'na'; }
+  var ip = '', t0 = Date.now(), page = (location.pathname.split('/').pop() || 'index'), sentTime = false;
+  function send(ev, detail) {
+    var d = { time: new Date().toISOString(), session: sid, ip: ip, event: ev, detail: detail || '', page: page, url: location.href,
+              ref: document.referrer, lang: navigator.language, screen: screen.width + 'x' + screen.height, ua: navigator.userAgent };
+    try { fetch(ENDPOINT, { method: 'POST', mode: 'no-cors', keepalive: true, headers: { 'Content-Type': 'text/plain' }, body: JSON.stringify(d) }); } catch (e) {}
+  }
+  fetch('https://api.ipify.org?format=json').then(function (r) { return r.json(); }).then(function (j) { ip = j.ip || ''; }).catch(function () {}).then(function () { send('page_view'); });
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest('a,button,summary'); if (!a) return;
+    var label = (a.innerText || a.getAttribute('aria-label') || '').replace(/\s+/g, ' ').trim().slice(0, 60);
+    send('click', label + (a.href ? ' -> ' + a.href : ''));
+  }, true);
+  var marks = { 25: 0, 50: 0, 75: 0, 100: 0 };
+  window.addEventListener('scroll', function () {
+    var h = document.documentElement, p = Math.round((h.scrollTop + innerHeight) / h.scrollHeight * 100);
+    [25, 50, 75, 100].forEach(function (m) { if (p >= m - 1 && !marks[m]) { marks[m] = 1; send('scroll', m + '%'); } });
+  }, { passive: true });
+  function leave() { if (sentTime) return; sentTime = true; send('time_on_page', Math.round((Date.now() - t0) / 1000) + 's'); }
+  document.addEventListener('visibilitychange', function () { if (document.visibilityState === 'hidden') leave(); else sentTime = false; });
+  window.addEventListener('pagehide', leave);
 })();
 </script>
 </body>
